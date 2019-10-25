@@ -12,3 +12,4 @@ A2 = integrate.quad(lambda x: x*np.cos(x), -np.pi, np.pi)
 print('Ergebnis für A2: ', A2)
 B2 = integrate.quad(lambda x: x*np.sin(x), -np.pi, np.pi)
 print('Ergebnis für B2: ', B2)
+#Test für VSCodium!
