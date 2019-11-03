@@ -14,6 +14,8 @@ for i in range(0, 10):
 b = np.sum(a)
 print('Der Mittelwert der Federkonstante beträgt: ', b/10, 'kg/s^2.')
 
-plt.xlabel("x")
-plt.ylabel("F")
-plt.show(plt.plot(x, F, '.'))
+plt.plot(x, F, '.', label = 'Messdaten')
+plt.xlabel(r"$x$ in [m]")
+plt.ylabel(r"$F$ in [N]")
+plt.legend(loc = 'best')
+plt.show()
