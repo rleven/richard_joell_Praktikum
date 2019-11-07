@@ -10,7 +10,7 @@ a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 y = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 m, n, r, p, std = linregress(x, F)
-print(m, n, r, p, std)
+#print(m, n, r, p, std)
 
 for i in range(0, 10):
     y[i] = m*x[i]+n
@@ -19,8 +19,9 @@ for i in range(0, 10):
 for i in range(0, 10):
     a[i] = x[i]/F[i]
 
-b = np.sum(a)/10
+b = np.sum(a)
 print('Der Mittelwert der Federkonstante beträgt: ', b, 'kg/s^2.')
+print('Die Steigung der Ausgleichsgerade beträgt: ', m, 'kg/s^2.')
 
 plt.errorbar(x, F, xerr=e_x, yerr=e_F, fmt='b.', label='Messdaten')
 plt.plot(x, y, c='red', label = 'Ausgleichsgerade')
