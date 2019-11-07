@@ -1,10 +1,11 @@
-\documentclass{scrartcl}
+\documentclass[captions=tableheading]{scrartcl}
 \usepackage[aux]{rerunfilecheck}
 
 \usepackage{fontspec}
 \usepackage[main=ngerman]{babel}
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
@@ -27,6 +28,38 @@ Es ist ein Lineal horizontal angelegt. Darauf befindet sich ein Pfeil, welcher m
 \subsection{Versuchsdurchführung}
 
 Der Pfeil wird nun auf dem Lineal nach rechts gezogen. Der Faden zieht dementsprechend an der Feder und übt eine Gegenkraft aus, welche dann vom Laptop angezeigt wird. Dies wird dann entsprechend in einer Tabelle dokumentiert.
+
+\subsection{Messwerte}
+
+\subsubsection{a)}
+
+Der Mittelwert 
+
+\section{Auswertung}
+\subsection{Wertetabelle}
+
+\begin{table}
+    \centering
+    \caption{Tabelle der Messwerte}
+    \label{tab:some_data}
+    \begin{tabular}{c c c}
+        \toprule
+        $\Delta x [m]$ & $F [N]$ & $D$\\
+        \midrule
+        0.05 & 0.15 & 0.33 \\
+        0.10 & 0.29 & 0.34 \\
+        0.15 & 0.44 & 0.34 \\
+        0.20 & 0.59 & 0.34 \\
+        0.25 & 0.74 & 0.34 \\
+        0.30 & 0.89 & 0.34 \\
+        0.35 & 1.04 & 0.34 \\
+        0.40 & 1.19 & 0.34 \\
+        0.45 & 1.34 & 0.34 \\
+        0.50 & 1.49 & 0.34 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 
 %.
 \end{document}
