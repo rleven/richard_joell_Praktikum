@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{flafter}
 \setmainfont{Libertinus Serif}
 \subject{Versuchsnummer: 803}
 \title{Das Hook'sche Gesetz}
@@ -17,9 +18,10 @@
     Durchführung: 05.11.2019\\
     Abgabe: 12.11.2019
 }
-\publishers{TUDortmund -Fachschaft Physik}
+\publishers{TU Dortmund - Fachschaft Physik}
 \begin{document}
 \maketitle
+\newpage
 \section{Der Versuch}
 \subsection{Versuchsbeschreibung}
 
@@ -29,14 +31,32 @@ Es ist ein Lineal horizontal angelegt. Darauf befindet sich ein Pfeil, welcher m
 
 Der Pfeil wird nun auf dem Lineal nach rechts gezogen. Der Faden zieht dementsprechend an der Feder und übt eine Gegenkraft aus, welche dann vom Laptop angezeigt wird. Dies wird dann entsprechend in einer Tabelle dokumentiert.
 
-\subsection{Messwerte}
+\newpage
 
-\subsubsection{a)}
+\subsection{Der Mittelwert}
 
-Der Mittelwert 
+\subsubsection{Berechnung}
 
-\section{Auswertung}
-\subsection{Wertetabelle}
+Sei N die Anzahl der aufgezeichneten Messwerte, in dem Fall also 10.
+
+Mit den gegebenen Werten lässt sich der Mittelwert wie folgt berechnen:
+
+\begin{equation}
+\overline{D} = \frac{1}{N}\sum_{k=1}^N D_{k}
+\end{equation}
+mit 
+\begin{equation}
+D_{k} = \frac{\Delta x_{k}}{F_{k}}
+\end{equation}
+.
+\newpage
+\subsection{Auswertung}
+
+Rechnet man mit den Werten der Tabelle und nutzt die oben gegebene Formel, dann ergibt sich für den Mittelwert von D =
+0.34 kg/s².
+
+
+\subsubsection{Wertetabelle}
 
 \begin{table}
     \centering
@@ -59,7 +79,6 @@ Der Mittelwert
         \bottomrule
     \end{tabular}
 \end{table}
-
 
 %.
 \end{document}
