@@ -20,7 +20,7 @@ for i in range(0, 10):
     a[i] = x[i]/F[i]
 
 b = np.sum(a)
-print('Der Mittelwert der Federkonstante beträgt: ', b, 'kg/s^2.')
+#print('Der Mittelwert der Federkonstante beträgt: ', b, 'kg/s^2.')
 print('Die Steigung der Ausgleichsgerade beträgt: ', m, 'kg/s^2.')
 
 plt.errorbar(x, F, xerr=e_x, yerr=e_F, fmt='b.', label='Messdaten')
@@ -28,4 +28,4 @@ plt.plot(x, y, c='red', label = 'Ausgleichsgerade')
 plt.xlabel(r"$x$ in [m]")
 plt.ylabel(r"$F$ in [N]")
 plt.legend(loc = 'best')
-#plt.savefig("Ausgleichsgerade.pdf")
+plt.savefig('build/Ausgleichsgerade.pdf')
