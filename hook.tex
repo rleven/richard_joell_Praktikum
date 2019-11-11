@@ -41,35 +41,55 @@ Der Pfeil wird nun auf dem Lineal nach rechts gezogen. Der Faden zieht dementspr
             \toprule
             $\Delta x [m]$ & $F [N]$ & $D$\\
             \midrule
-            0.05 & 0.15 & 0.33 \\
-            0.10 & 0.29 & 0.34 \\
-            0.15 & 0.44 & 0.34 \\
-            0.20 & 0.59 & 0.34 \\
-            0.25 & 0.74 & 0.34 \\
-            0.30 & 0.89 & 0.34 \\
-            0.35 & 1.04 & 0.34 \\
-            0.40 & 1.19 & 0.34 \\
-            0.45 & 1.34 & 0.34 \\
-            0.50 & 1.49 & 0.34 \\
+            0.05 & 0.15 & 3.00 \\
+            0.10 & 0.29 & 2.90 \\
+            0.15 & 0.44 & 2.93 \\
+            0.20 & 0.59 & 2.95 \\
+            0.25 & 0.74 & 2.96 \\
+            0.30 & 0.89 & 2.96 \\
+            0.35 & 1.04 & 2.97 \\
+            0.40 & 1.19 & 2.98 \\
+            0.45 & 1.34 & 2.98 \\
+            0.50 & 1.49 & 2.98 \\
             \bottomrule
         \end{tabular}
     \end{table}
 
 \section{Berechnung}
+
+\subsection{Der Mittelwert}
+
+Sei N die Anzahl der aufgezeichneten Messwerte, in dem Fall also 10.
+
+Mit den gegebenen Werten lässt sich der Mittelwert wie folgt berechnen:
+
+\begin{equation}
+\overline{D} = \frac{1}{N}\sum_{k=1}^N D_{k}
+\end{equation}
+mit 
+\begin{equation}
+D_{k} = \frac{\Delta x_{k}}{F_{k}}
+\end{equation}
+.
+\newpage
+\subsection{Auswertung}
+
+Rechnet man mit den Werten der Tabelle und nutzt die oben gegebene Formel, dann ergibt sich für den Mittelwert von D =
+2.96 kg/s².
+
 \subsection{Ausgleichsgerade}
 
 Zur Berechnung der Ausgleichsgerade haben wir in unserem Python-Programm den Befehl linregress benutzt.
 Dieser gibt uns die Steigung sowie den Schnittpunkt mit der y-Achse an.\\
-Alle Punkte aufgetragen und die Ausgleichsgerade hindurchgelegt, sieht der Plot wie folgt aus:
-
+Alle Punkte aufgetragen und die Ausgleichsgerade hindurchgelegt, sieht der Plot wie folgt aus: \\
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
 \begin{figure}
-\includepdf[scale=0.45, offset= 0mm -50mm]{build/Ausgleichsgerade}
+\includepdf[scale=0.45, offset= 0mm 20mm]{build/Ausgleichsgerade}
 \end{figure}
 
-\newpage
 
-Mit den gemessenen Werten gibt der Befehl linregress für die Steigung der Geraden den Wert 2.989 aus.
-Dies ist der Wert der Federkonstante.\\
-Der mit dem Mittelwert errechnete Wert weicht somit um xxxx davon ab.
+Mit den gemessenen Werten gibt der Befehl linregress für die Steigung der Geraden den Wert 2.99 aus.
+Dies ist der Wert der Federkonstante in kg/s².\\
+Der mit dem Mittelwert errechnete Wert weicht somit um 0.03 kg/s² davon ab.
 %.
 \end{document}
