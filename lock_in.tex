@@ -9,7 +9,12 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{scrhack}
+\usepackage{float}
 \usepackage{pdfpages}
+\floatplacement{figure}{htbp}
 \setmainfont{Libertinus Serif}
 \subject{Versuchsnummer: 303}
 \title{Der Lock-In-Verstärker}
@@ -45,7 +50,10 @@ Das resultierende Signal wird mit einem Tiefpassfilter integriert, sodass eine G
 \section{Versuchsaufbau}
 
 \begin{figure}
-\includepdf[scale=0.5, offset= 0mm -85mm]{Lock_In Bilder/Versauf.jpg}
+\centering
+\includegraphics[scale=0.07]{Lock_In Bilder/Versauf.jpg}
+\caption{Der Versuchsaufbau}
+\label{fig:versau}
 \end{figure}
 \newpage
 \section{Versuchsdurchführung}
@@ -64,7 +72,29 @@ sondern bereits nach dem Lock-In.
 Gleichzeitig wurde auch ein Signal zum Tiefpass-Input gelegt, sodass der Versuchsaufbau nun wie die Schaltkreis-Skizze der Aufgabe 4 geschaltet war.
 Die LED wurde mit einer Frequenz von 300Hz betrieben. 
 Für eine genauere Messung wurde der Raum verdunkelt und teilweise wurde das Experiment mit Objekten zugedeckt.
-
+\newpage
 \section{Auswertung}
-
+    \begin{itemize}
+        \item{Aufgabe 1 \\}
+            \begin{figure}
+                \centering
+                \includegraphics{Lock_In Bilder/Aufgabe 1/MAP001.pdf}
+                \caption{Die Sägezahnschwingung}
+                \label{fig:sawsig}
+            \end{figure}
+            \\
+            In Abbildung \ref{fig:sawsig} wurde der Output nach dem Lock-In abgegriffen und nicht nach dem Tiefpass.
+            Eine Sägezahnschwingung ist das Resultat. 
+            Sie wird durch die Überlagerung von \(U_{sig}\) und \(U_{ref}\) erzeugt und ihre Sägezahn-Form wird durch einen Bandpassfilter erzwungen. 
+            \begin{figure}
+                \centering
+                \includegraphics{Lock_In Bilder/Aufgabe 1/MAP002.pdf}
+                \caption{Die Gleichspannung}
+                \label{fig:flatsig}
+            \end{figure}
+            \\
+            In Abbildung \ref{fig:flatsig} wurde der Output nach dem Tiefpass abgegriffen.
+            Eine Gleichspannung im negativen Bereich ist das Resultat.
+            Sie entsteht, wenn die Sägezahnschwingung aus Abbildung \ref{fig:sawsig} durch den Tiefpass verändert wird.
+    \end{itemize}
 \end{document}
