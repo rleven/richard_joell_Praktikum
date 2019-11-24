@@ -85,7 +85,7 @@ Für eine genauere Messung wurde der Raum verdunkelt und teilweise wurde das Exp
             \\
             In Abbildung \ref{fig:sawsig} wurde der Output nach dem Lock-In abgegriffen und nicht nach dem Tiefpass.
             Eine Sägezahnschwingung ist das Resultat. 
-            Sie wird durch die Überlagerung von \(U_{sig}\) und \(U_{ref}\) erzeugt und ihre Sägezahn-Form wird durch einen Bandpassfilter erzwungen. 
+            \\
             \begin{figure}
                 \centering
                 \includegraphics{Lock_In Bilder/Aufgabe 1/MAP002.pdf}
@@ -187,11 +187,8 @@ Für eine genauere Messung wurde der Raum verdunkelt und teilweise wurde das Exp
             \end{figure}
             \\
             \end{itemize}
-        
         \item{Aufgabe 4 \\}
         \\
-        Im Zuge dieser Messung wurden 4 korrekte Werte aufgenommen und 3 offensichtlich falsch gemessenen Werte.
-        Die falsch gemessenen Werte sind im Anhang zu finden.
             \begin{figure}
                 \centering
                 \includegraphics{Lock_In Bilder/Aufgabe 4/MAP001.pdf}
@@ -220,7 +217,7 @@ Für eine genauere Messung wurde der Raum verdunkelt und teilweise wurde das Exp
                 \label{fig:20cmled}    
             \end{figure}
             \\
-        Die sich vergrößernden Abstände in den Signalen in Mikrosekunden zeigen die Abschwächung des Lichtsignals.(Das muss in die Diskussion!)
+        Die sich vergrößernden Abstände in den Signalen in Mikrosekunden zeigen die Abschwächung des Lichtsignals. (Siehe Diskussion)
             \begin{figure}
                 \centering
                 \includegraphics[scale=0.75]{build/graph.pdf}
@@ -229,6 +226,14 @@ Für eine genauere Messung wurde der Raum verdunkelt und teilweise wurde das Exp
             \end{figure}
         \\
         Hier ist eine Veranschaulichung der Messwerte und ihrer Korrelation zu einem \(1/r²\) Abstand.
+
+\section{Diskussion}
+Der Unterschied zwischen den Messungen in Aufgabe 1 resultiert aus der Tatsache, dass der Tiefpass den Strom hier, in diesem Fall, mit nur einem bestimmten Frequenzbereich durchlässt. Von daher entsteht ein Gleichstrom.
+Die durch den Bandpass erzwungene Sägezahnkurve entsteht aus der Überlagerung von \(U_{ref}\) und \(U_{sig}\).
+In den Bildern der 2. und 3. Aufgabe scheint die Kurve sich zu spiegeln. Dies entspricht den Erwartungen, da der Phasenunterschied zwischen \(U_{ref}\) und \(U_{sig}\) sich um genau 180 Grad verschiebt und nach Gleichung (5) ändert sich auch das Vorzeichen von der Gesamtspannung.
+In der 4. Aufgabe wurden vier richtige und drei falsch gemessene Messungen aufgenommen, welche sich im Anhang befinden.
+Die Kurve weist eine \(r²\)-Abhängigkeit auf, weil der durch den Lock-In Verstärker hervorgerufenen Gap in Mikrosekunden als X-Achse gewählt wurde. Diese Gaps werden länger je größer die Distanz zwischen Sender und Empfänger ist. Die Intensität des Lichts weist eine \(1/r²\)-Abhängigkeit auf, wobei sie eben eine Antiproportionalität zu dem, also eine \(r²\)-Abhängigkeit aufweisen.
+
         % Hi Joell! Bitte implementiere hier Aufgabe 3 [Freitag]! Deine Parts sind dann nur noch die Diskussion[Samstag], die Literatur(welche wir nicht haben) [Sonntag] und der Anhang mit den Originaldaten!
         % Ich implementiere Aufgabe 4. Falls dir Verbesserungen einfallen, bitte füge sie ein und sag mir Bescheid :)
         %In die Diskussion muss auf jeden Fall die Begründung rein, warum in graph.pdf eine Korrelation zwischen messwerten und r² ist und nicht 1/r²!!! Das ist weil wir einen Unterschied im signal haben, der in mikrosekunden angezeigt wird und nicht in cm!
