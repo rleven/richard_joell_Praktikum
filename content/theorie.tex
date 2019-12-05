@@ -1,4 +1,20 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+%\cite{sample}
+Eine elektrische Schwingung wird mithilfe eines Schwingkreises, bestehend aus einem Kondensator und einer Spule, erzeugt.
+Beides wird in Reihe geschaltet und ein Strompuls zugeführt.
+Der Kondensator ist voll aufgeladen und dann beginnt der Strom über die Spule zu fließen und der Kondensator entlädt sich kurzzeitig, bis er mit umgekehrter Polarisation erneut voll aufgeladen ist.
+Bei einem idealen Schaltkreis ohne jegliche Widerstände, entsteht so ein harmonischer Oszillator der Form:
+\begin{equation}
+    \ddot{I} + \omega² I = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
+\end{equation}
+Wenn in den Schaltkreis ein Widerstand eingebaut wird, so nimmt die Schwingung mit der Zeit ab, da sich der Strom im Widerstand in andere Energieformen umwandelt.
+Je nachdem wie hochohmig dieser Widerstand ausfällt, ist die dazugehörige Schwingung ein Schwingfall, ein Kriechfall oder ein aperiodischer Grenzfall.
+Die zugehörige Bewegungsgleichung sieht wie folgt aus:
+\begin{equation}
+    \ddot{I} + \frac{R}{L}\dot{I} + \omega² I = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
+\end{equation}
+Mithilfe des Ausgangssignals kann individuell der Widerstand, die Kapazität oder die Induktivität berechnet werden, falls zwei der drei Größen gegeben ist.
+\\
+Ein gedämpfter Schwingkreis kann auch als Phasenverschieber benutzt werden, wenn eine konstante Wechselspannung angelegt wird.
