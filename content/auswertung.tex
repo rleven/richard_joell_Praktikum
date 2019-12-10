@@ -76,9 +76,9 @@ Die Formel für den Widerstand \(R_{ap}\) lautet:
 \end{equation}
 Mit den gegebenen Werten L = 3.5\pm0.01mH und C = 5.00\pm0.02nF ergibt sich daraus ohne Fehlerrechnung:
 \begin{equation}
-  R_{ap} = 1673.32\Omega
+  R_{ap} = 1673.32\pm2.4\Omega
 \end{equation}
-Die Diskrepanz liegt bei 543.32\(\Omega\).
+Die Diskrepanz liegt bei 543.32\(\pm\)2.4\(\Omega\).
 
 \newpage
 \subsection{Verhältnis von \(U_C\) zur Frequenz}
@@ -162,12 +162,12 @@ Die \autoref{tab:tab3} enthält die Messdaten vor der Rechnung und \autoref{tab:
     \toprule
     $\nu$ in $kHz$ & $\Delta\phi$ in °\\
     \midrule
-    140 & 67.2\\
-    120 & 18.58\\
-    100 & 9.82\\
-    80 & 7.2\\
-    60 & 4.5\\
-    40 & 4.11\\
+    40 & 67.2\\
+    60 & 18.58\\
+    80 & 9.82\\
+    100 & 7.2\\
+    120 & 4.5\\
+    140 & 4.11\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -181,5 +181,11 @@ Die Werte in \autoref{fig:plot3} zeigen einen exponentiellen Abfall bei höherer
   \caption{Plot3.}
   \label{fig:plot3}
 \end{figure}
+
+Diese Kurve enstpricht der Funktion
+\begin{equation}
+  f(x) = A\cdot e^{-\lambda\cdot\nu} \quad\textrm{mit}\quad A = 67,2 \quad\textrm{und}\quad \lambda\simeq 0.02
+\end{equation}
+
 
 %Siehe \autoref{fig:plot}!
