@@ -1,0 +1,8 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Ziel}{3}{section.1}% 
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}% 
+\contentsline {section}{\numberline {3}Versuchsaufbau}{3}{section.3}% 
+\contentsline {section}{\numberline {4}Durchführung}{5}{section.4}% 
+\contentsline {section}{\numberline {5}Auswertung}{5}{section.5}% 
+\contentsline {section}{\numberline {6}Diskussion}{9}{section.6}% 
