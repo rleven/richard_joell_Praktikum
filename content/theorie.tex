@@ -2,6 +2,7 @@
 \label{sec:Theorie}
 
 %\cite{sample}
+\subsection{Ungedämpfte Schwingung}
 Eine elektrische Schwingung wird mithilfe eines Schwingkreises, bestehend aus einem Kondensator und einer Spule, erzeugt.
 Beides wird in Reihe geschaltet und ein Strompuls zugeführt.
 Der Kondensator ist voll aufgeladen und dann beginnt der Strom über die Spule zu fließen und der Kondensator entlädt sich kurzzeitig, bis er mit umgekehrter Polarisation erneut voll aufgeladen ist.
@@ -10,6 +11,11 @@ Bei einem idealen Schaltkreis ohne jegliche Widerstände, entsteht so ein harmon
     \ddot{I} + \omega² I = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
     \label{eq:harmossi}
 \end{equation}
+Die Lösung für diesen harmonischen Oszillator ist
+\begin{equation}
+    I(t) = U_0\cdot e^{i\omega t}
+\end{equation}
+\subsection{Gedämpfte Schwingung}
 Wenn in den Schaltkreis ein Widerstand eingebaut wird, so nimmt die Schwingung mit der Zeit ab, da sich der Strom im Widerstand in andere Energieformen umwandelt.
 Je nachdem wie hochohmig dieser Widerstand ausfällt, ist die dazugehörige Schwingung ein Schwingfall, ein Kriechfall oder ein aperiodischer Grenzfall.
 Die zugehörige Bewegungsgleichung sieht wie folgt aus:
@@ -17,9 +23,21 @@ Die zugehörige Bewegungsgleichung sieht wie folgt aus:
     \ddot{I} + \frac{R}{L}\dot{I} + \omega² I = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
     \label{eq:dampfossi}
 \end{equation}
-Mithilfe des Ausgangssignals kann individuell der Widerstand, die Kapazität oder die Induktivität berechnet werden, falls zwei der drei Größen gegeben ist.
+Die allgemeine Lösung dieser DGL lautet
+\begin{equation}
+    I(t) = A_0 \cdot e^{-\frac{R}{2L}t} \cdot \cos{(\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}\cdot t+\eta)}
+\end{equation}
+Mithilfe des Ausgangssignals kann individuell der Widerstand, die Kapazität oder die Induktivität berechnet werden, falls zwei der drei Größen gegeben sind.
+Die Form der Einhüllenden \(e^{-\frac{R}{2L}t}\) gibt hierbei an, welcher Fall eintritt.
+Ist \(\frac{1}{LC}<\frac{R^2}{2L^2}\), so liegt ein Kriechfall vor, bei dem die Schwingung langsam kontinuierlich abfällt.
+\\\\
+Ist \(\frac{1}{LC}>\frac{R^2}{2L^2}\), so liegt ein Schwingfall vor, bei dem die Schwingung exponentiell über längere Zeit abfällt.
+\\\\
+Ist \(\frac{1}{LC}=\frac{R^2}{2L^2}\), so liegt ein aperiodischer Grenzfall vor, bei dem die Schwingung am schnellsten und ohne Überschwingen abfällt.
 \\
+\subsection{Phasenverschiebung}
 Ein gedämpfter Schwingkreis kann auch als Phasenverschieber benutzt werden, wenn eine konstante Wechselspannung angelegt wird.
+Die Sinus-Spannung wird vor und nach dem Schwingkreis untersucht und auf einem Oszilloskop überlagert.
 Um diesen Phasenunterschied auszurechnen benutzt man:
 \begin{equation}
     \Delta\phi = \frac{a}{b}\cdot360

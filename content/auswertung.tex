@@ -1,6 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Bestimmung von \(R_1\)}
 \begin{figure}
   %Plot der Messwerte aus a)
   \centering
@@ -8,8 +9,8 @@
   \caption{Plot.}
   \label{fig:plot}
 \end{figure}
-
-\begin{table}
+Der grüne Vergleichsgraph ist die rechnerisch korrekte Einhüllende mit den gegebenen Werten für Schaltkreis 3.
+\begin{table}[htp]
   %Messwerte aus a)
   \centering
   \caption{Tabelle der Messwerte mit \(R_1\).}
@@ -31,7 +32,57 @@
     \bottomrule
   \end{tabular}
 \end{table}
+\\
+Die Messwerte entsprechen leider nicht der Formel aus dem Versuch, sondern haben starke Abweichungen.
 
+\newpage
+\subsection{Bestimmung von \(R_{ap}\)}
+Der aperiodische Grenzfall wurde bei einer Signalfrequenz von 1.6\(kHz\) gemessen.\\
+Die \autoref{fig:aper} zeigt, dass bei der Einstellung 2.26 am Drehrad(siehe \autoref{fig:drehohm}), sich der aperiodische Grenzfall einstellt.\\
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.9\textwidth}
+    \centering
+    \includegraphics[height=6cm]{content/aperiode.jpg}
+    \caption{Aperiodischer Grenzfall.}
+    \label{fig:aper}
+  \end{subfigure}
+  \begin{subfigure}{0.9\textwidth}
+    \centering
+    \includegraphics[height=8cm]{content/aperoiode_ohm.jpg}
+    \caption{Messung am Drehrad.}
+    \label{fig:drehohm}
+  \end{subfigure}
+  %\caption{Zwei Logos, Abbildung \subref{fig:TU}: Das TU-Logo.}
+  %\label{fig:logos}
+\end{figure}
+
+Mithilfe eines einfachen Dreisatzes lässt sich dieser Wert auf einen effektiven Dämpfungswiderstand von \(R_{ap}\) = 1,13k\Omega zurückführen.
+
+\begin{table}
+  \centering
+  \caption{Dreisatz}
+  \label{tab:drei}
+  \begin{tabular}{c c}
+    \midrule
+    10 & 5k\(\Omega\)\\
+    2.26 & 1.13k\(\Omega\)\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Die Formel für den Widerstand \(R_{ap}\) lautet:
+\begin{equation}
+  R_{ap} = 2\cdot\sqrt{\frac{L}{C}}
+\end{equation}
+Mit den gegebenen Werten L = 3.5\pm0.01mH und C = 5.00\pm0.02nF ergibt sich daraus ohne Fehlerrechnung:
+\begin{equation}
+  R_{ap} = 1673.32\Omega
+\end{equation}
+Die Diskrepanz liegt bei 543.32\(\Omega\).
+
+\newpage
+\subsection{Verhältnis von \(U_C\) zur Frequenz}
+Die Kondensatorspannung \(U_C\) nimmt anfangs mit steigender Frequenz ebenfalls zu, bis sie bei ca 35kHz wieder abnimmt.
 \begin{table}
   %Messwerte aus c)
   \centering
@@ -39,7 +90,7 @@
   \label{tab:tab2}
   \begin{tabular}{c c}
     \toprule
-    $\nu$ in $kHz$ & U in $V$\\
+    $\nu$ in $kHz$ & \(U_C\) in $V$\\
     \midrule
     5 & 0.8\\
     10 & 0.85\\
@@ -68,7 +119,20 @@
   \label{fig:plot2}
 \end{figure}
 
-\begin{table}
+\newpage
+\subsection{Phasendifferenz vor und nach dem Schwingkreis}
+Um den Phasenunterschied zu messen erfordert es die Distanz a zwischen den Signalen auf der x-Achse und die Wellenlänge b.\\
+
+\begin{figure}[htb]
+  \centering
+  \caption{Formel zu Phasendifferenz.}
+  \label{fig:phasenart}
+  \includegraphics[scale = 0.5]{content/Phasendar.png}
+\end{figure}
+
+In \autoref{fig:phasenart} ist der Messvorgang verdeutlicht.\\
+
+\begin{table}[htb]
   %Messwerte aus d)
   \centering
   \caption{Tabelle der Messwerte mit Phasenunterschied.}
@@ -86,9 +150,11 @@
     \bottomrule
   \end{tabular}
 \end{table}
+\newpage
+Die \autoref{tab:tab3} enthält die Messdaten vor der Rechnung und \autoref{tab:tab4} zeigt die Korrelation von Frequenz und Phasenverschiebung.\\
 
-\begin{table}
-  %Messwerte aus c) mit Delta Phi
+\begin{table}[htb]
+  %Messwerte aus d) mit Delta Phi
   \centering
   \caption{Tabelle der Messwerte mit \(\Delta\phi\)}
   \label{tab:tab4}
@@ -106,12 +172,14 @@
   \end{tabular}
 \end{table}
 
-\begin{figure}
+Die Werte in \autoref{fig:plot3} zeigen einen exponentiellen Abfall bei höherer Frequenz.\\
+
+\begin{figure}[htb]
   %Plot zu Messwerten aus d)
   \centering
-  \includegraphics{plot3.pdf}
+  \includegraphics[scale = 0.7]{plot3.pdf}
   \caption{Plot3.}
   \label{fig:plot3}
 \end{figure}
 
-Siehe \autoref{fig:plot}!
+%Siehe \autoref{fig:plot}!
