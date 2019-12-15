@@ -1,0 +1,23 @@
+\section{Theorie}
+\label{sec:Theorie}
+
+In vielen Punkten ist der elektrische gekoppelte Schwingkreis seinem mechanischen Äquivalent sehr ähnlich.
+So besitzt der elektrische Schwingkreis eine mitphasige und eine gegenphasige Schwingungen. 
+Die "Feder" ist jedoch ein Kondensator, der die beiden Schaltkreise verbindet.
+Schwingen beide Kreise mit gleicher Phase und Frequenz, wird dieser gewissermaßen übergangen, so wie auch die Feder bei gleicher Schwingung nicht ausgelenkt wird.
+Sollten beide Kreise gegenphasig schwingen, so wird der Kondensator stark belastet.
+\subsection{Gedämpfter Schwingkreis}
+Der gemeine gedämpfte Schwingkreis besteht aus 3 Basiskomponenten: Kondensator, Spule und Widerstand.
+Der Strom am geladenen Kondensator beginnt über die Spule zu fließen, sobald keine Stromquelle mehr vorliegt, bis der Kondensator seine Polarität gewechselt hat.
+Der Strom erzeugt bei diesem Vorgang ein Magnetfeld um die Spule herum. 
+Wenn sich die gesamte Ladung an der anderen Kondensatorplatte angelagert hat, kollabiert das Magnetfeld und sorgt dafür, dass die Ladung wieder beginnt zur anderen Platte zu fließen.
+Der Widerstand wandelt dabei bei jedem Laden und Entladen des Kondensators einen Teil des Stroms in Wärme um, sodass der Schwingkreis gestört wird und nach ein paar Zyklen verebbt.
+Die Differenzialgleichung für diesen Schwingkreis lautet:
+\begin{equation}
+    \ddot{I}(t) + \frac{R}{L}\dot{I} + \omega I(t) = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
+    \label{eq:harmossi}
+\end{equation}
+Die allgemeine Lösung dazu lautet:
+\begin{equation}
+    I(t) = A_0 \cdot e^{-\frac{R}{2L}t} \cdot \cos{(\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}\cdot t+\eta)}
+\end{equation}
