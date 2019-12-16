@@ -14,8 +14,8 @@ Wenn sich die gesamte Ladung an der anderen Kondensatorplatte angelagert hat, ko
 Die Widerstände in den Leitern, Kondensator und Spule wandeln dabei bei jedem Laden und Entladen des Kondensators einen Teil des Stroms in Wärme um, sodass der Schwingkreis gestört wird und nach ein paar Zyklen verebbt.
 Die Differenzialgleichung für diesen Schwingkreis lautet:
 \begin{equation}
-    \ddot{I}(t) + \frac{R}{L}\dot{I} + \omega I(t) = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
-    \quad\textrm{, falls}\quad \frac{1}{LC} > \frac{R^2}{4L^2}
+    \ddot{I}(t) + \frac{R}{L}\dot{I} + \omega^2 I(t) = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
+    \quad\textrm{falls}\quad \frac{1}{LC} > \frac{R^2}{4L^2}
     \label{eq:harmossi}
 \end{equation}
 Die allgemeine Lösung für den Fall dazu lautet:
@@ -57,18 +57,26 @@ Mit
 \end{equation}
 und zusätzlicher Differentiation nach der Zeit wird das Gleichungssystem zu einem Differentialgleichungssystem:
 \begin{equation}
-L \frac{d^2}{dt^2} (I_1 + I_2) + \frac{1}{C}(I_1+I_2) = 0\\
-\quad\textrm{und}\quad\\
-L \frac{d^2}{dt^2} (I_1 - I_2) + \Biggl(\frac{1}{C} + \frac{2}{C_k} \Biggr)(I_1 - I_2) = 0.\\
+L \frac{d^2}{dt^2} (I_1 + I_2) + \frac{1}{C}(I_1+I_2) = 0
+\end{equation}
+\centering{und}
+\begin{equation}
+L \frac{d^2}{dt^2} (I_1 - I_2) + \Biggl(\frac{1}{C} + \frac{2}{C_k} \Biggr)(I_1 - I_2) = 0.
 \end{equation}
 Die allgemeinen Lösungen lauten:
 \begin{equation}
-    (I_1+I_2)(t) = (I_{1,0} + I_{2,0}) \cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr)\\
-    \quad\textrm{und}\quad\\
-    (I_1-I_2)(t) = (I_{1,0} - I_{2,0}) \cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)\\
-    \quad\textrm{also gilt für I_1 und I_2:}\quad\\
-    I_1(t) = \frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)+\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr)\\
-    I_2(t) = \frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)-\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr).
+    (I_1+I_2)(t) = (I_{1,0} + I_{2,0}) \cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr)
+\end{equation}
+\centering{und}
+\begin{equation}
+    (I_1-I_2)(t) = (I_{1,0} - I_{2,0}) \cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)
+\end{equation}
+\centering{also gilt für \(I_1\) und \(I_2\):}
+\begin{equation}
+    I_1(t) = \frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)+\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr)
+\end{equation}
+\begin{equation}
+    I_2(t) = \frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)-\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr)
 \end{equation}
 Es existieren 2 spezielle Fälle, wie das System schwingen kann:
 1)
@@ -85,7 +93,9 @@ Nun kann anhand der verschiedenen Vorzeichen in beiden Gleichungen festgestellt 
 \\
 Falls jedoch eine der beiden Anfangsamplituden 0 ist, während der andere Schwinger ausgelenkt ist, so folgt durch das Einsetzen der Anfangsbedingungen und nach trigonometrischen Umformungen:
 \begin{equation}
-    I_1(t)=I_{1,0}\cos\Biggl(\frac{1}{2}(\omega^{+}+\omega^{-})t\Biggr)\cos\Biggl(\frac{1}{2}(\omega^{+}-\omega^{-})t\Biggr)\\
-    \quad\textrm{und}\quad\\
+    I_1(t)=I_{1,0}\cos\Biggl(\frac{1}{2}(\omega^{+}+\omega^{-})t\Biggr)\cos\Biggl(\frac{1}{2}(\omega^{+}-\omega^{-})t\Biggr)
+\end{equation}
+\centering{und}
+\begin{equation}
     I_2(t)=I_{1,0}\sin\Biggl(\frac{1}{2}(\omega^{+}+\omega^{-})t\Biggr)\sin\Biggl(\frac{1}{2}(\omega^{+}-\omega^{-})t\Biggr)
 \end{equation}
