@@ -2,23 +2,37 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Die gegebenen Werte für \(L\), \(C\) und \(C_{sp}\) sind:
+\begin{table}
+  \centering
+  \caption{Gegebene Werte}
+  \label{tab:tab}
+  \begin{tabular}{c c}
+    \midrule
+    \(L\) & \(3.2351\cdot10^{-2} H\)\\
+    \(C\) & \(8.015\cdot10^{-10} F\)\\
+    \(C_{sp}\) & \(3.7\cdot10^{-11} F\)\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \subsection{Verhältnis von Schwingungs- und Schwebungsfrequenz}
 Die Anzahl der Maxima in einer Einhüllenden steigt mit der Kapazität an, wie \autoref{fig:plot} zeigt.
 \begin{table}
   \centering
   \caption{Tabelle der Messwerte zur Schwingungsfrequenz}
   \label{tab:tab1}
-  \begin{tabular}{c c}
+  \begin{tabular}{c c c}
     \toprule
-    \(C_K\) in $nF$ & Anzahl Maxima\\
+    \(C_K\) in $nF$ & Anzahl Maxima & Anzahl Minima\\
     \midrule
-    2.03 & 4\\
-    3.00 & 5\\
-    4.00 & 5\\
-    5.02 & 6\\
-    6.47 & 8\\
-    8.00 & 11\\
-    9.99 & 14\\
+    2.03 & 4 & 3\\
+    3.00 & 5 & 4\\
+    4.00 & 5 & 6\\
+    5.02 & 6 & 7\\
+    6.47 & 8 & 8\\
+    8.00 & 11 & 10\\
+    9.99 & 14 & 13\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -27,10 +41,19 @@ Die Anzahl der Maxima in einer Einhüllenden steigt mit der Kapazität an, wie \
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
-  \caption{Kapazität gegen Anzahl an Maxima.}
+  \caption{Kapazität gegen Anzahl an Extrema.}
   \label{fig:plot}
 \end{figure}
+\newpage
 Das Verhältnis muss demnach annähernd linear mit der Kapazität ansteigen.
+Die rechnerischen Werte für \(\nu_+\) ergeben sich aus:
+\begin{equation}
+  \nu_+ = \frac{1}{\sqrt{LC}} = 196.3832kHz
+\end{equation}
+\centering{oder}
+\begin{equation}
+  \nu_+ = \frac{1}{\sqrt{L(C+C_{sp})}} = 192.0015kHz
+\end{equation}
 \newpage
 \subsection{Lissajou-Figuren}
 
@@ -64,12 +87,34 @@ Es ist sehr deutlich zu sehen, dass die Phasenverschiebung um \(\pi\) so gut wie
   \label{fig:plot2}
 \end{figure}
 \newpage
+Die Theorie-Werte für \(\nu_-\) weichen nur leicht ab:
+\\
+\begin{table}
+  \centering
+  \caption{Theoriewerte für \(\nu_-\)}
+  \label{tab:tab3}
+  \begin{tabular}{c c}
+    \toprule
+    C in \(nF\) & \(\nu_-\) in \(Hz\)\\
+    \midrule
+    1.01 & 49842.28\\
+    2.03 & 41294.10\\
+    3.00 & 38154.68\\
+    4.00 & 36404.43\\
+    5.02 & 35294.99\\
+    6.47 & 34290.31\\
+    8.00 & 33608.58\\
+    9.99 & 33023.39\\
+  \end{tabular}
+\end{table}
+Die Abweichungen von den gemessenen Werten verkleinern sich mit zunehmender Kapazität \(C_k\), angefangen bei 5.52\% bei 1.01nF bis hin zu nur 0.86\% bei 9.99nF.
+\newpage
 \subsection{Stromverlauf im gekoppeltem Schwingkreis}
 
 \begin{table}
   \centering
   \caption{Tabelle der Messwerte zur Phasenverschiebung}
-  \label{tab:tab2}
+  \label{tab:tab4}
   \begin{tabular}{c c c c c}
     \toprule
     \(C_K\) in $nF$ & Erste Ampl & Zweite Ampl & a in $ms$ & b in $ms$\\
@@ -85,13 +130,47 @@ Es ist sehr deutlich zu sehen, dass die Phasenverschiebung um \(\pi\) so gut wie
   \end{tabular}
 \end{table}
 
-Die \autoref{fig:plot3} zeigt die jeweiligen Amplituden der Kurve des Oszilloskops und ihre Entfernung zueinander in ms.
-Die zweite Amplitude befindet sich genau \(s = a + b\) von \(t = 0\).
-Je näher die zweite Amplitude ist, desto höher ist die Kapazität \(C_K\).
-Man kann annehmen, dass sich die Position der ersten Amplitude so gut wie nicht verändert.
+Die \autoref{fig:plot3} zeigt die Verteilung der Frequenzen \(\omega^\pm\) in Anhängigkeit der Kapazität von \(C_k\).
+Wie auch schon bei \autoref{fig:plot2} zeigt \(\omega^-\) eine abfallende Kurve.
+Um \(\omega^+\) und \(\omega^-\) zu erhalten, muss man die Werte des Wobbelgenerators miteinander verrechnen:
+\begin{equation}
+  \omega^+ = \frac{24.99 kHz}{0.16 s}\cdot17.5 s \simeq 2733.28 kHz
+\end{equation}
+\centering{und}
+\begin{equation}
+  \omega^- = \frac{24.99 kHz}{0.16 s}\cdot 29.5 s + 2733.28 kHz \simeq 7340.81 kHz
+\end{equation}
+Diese beiden Werte sind bei einer Kapazität von 2.03 nF gemessen worden.
+Die selbe Rechnung wird bei allen Kapazitäten angewandt, die man in \autoref{tab:tab5} sieht.
+
+\begin{table}
+  \centering
+  \caption{Errechnete Frequenzwerte für \(\omega^+\) und \(\omega^-\).}
+  \label{tab:tab5}
+  \begin{tabular}{c c c}
+    \toprule
+    \(C_K\) in $nF$ & \(\omega^+\) in $kHz$ & \(\omega^-\) in $kHz$\\
+    \midrule
+    2.03 & 2733.28125 & 7340.8125\\
+    3.00 & 2811.375 & 6169.40625\\
+    4.00 & 2811.375 & 5388.46875\\
+    5.02 & 2733.28125 & 4841.8125\\
+    6.47 & 2733.28125 & 4373.25\\
+    8.00 & 2733.28125 & 4060.875\\
+    9.99 & 2811.375 & 3826.59375\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \begin{figure}
   \centering
   \includegraphics{plot3.pdf}
-  \caption{Spannung gegen Zeit.}
+  \caption{Kapazität gegen Frequenz.}
   \label{fig:plot3}
 \end{figure}
+Um den zugehörigen Strom zu bestimmen, verwendet man \autoref{eq:strom+} und \autoref{eq:strom-}:
+\begin{equation}
+  I_2 = |U| \cdot |L(\omega^\pm)| \quad\textrm{mit}\quad |U| = 8V
+\end{equation}
+
+\(|L(\omega^\pm)|\) hat bei allen Kapazitäten den ungefähren Wert \(0.01\frac{1}{\Omega}\), sodass \(I_2\) konstant \(0.08A\) ergibt.
