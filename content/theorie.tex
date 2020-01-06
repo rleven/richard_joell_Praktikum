@@ -63,6 +63,7 @@ Die sogenannte Richtgröße des Zylinders lautet hierbei:
 Die resultierende Bewegungsgleichung des Systems setzt sich dann aus \autoref{eq:formel8} und der \textit{Trägheit der rotierenden Masse} zusammen:
 \begin{equation}
     D\phi \ +\ \theta\frac{d^2\phi}{dt^2} = 0
+    \label{eq:formel12}
 \end{equation}
 Die Lösung dazu lautet:
 \begin{equation}
@@ -97,6 +98,14 @@ Ihre Beziehung lässt sich durch
 darstellen.\\
 Die Querkontraktionszahl $\mu$ ist eine elastische Konstante, die angibt, wie groß die Längenänderung eines gedehnten Körpers ist.
 Das Kompressionsmodul Q, ebenfalls eine elastische Konstante, gibt die Volumenänderung an.\\
+\subsection{Magnetisches Moment}
+Um ein magnetisches Moment mittels Torsion zu berechnen, verwendet man eine ähnliche Formel wie \autoref{eq:formel12}, die m enthält.
+Nach m aufgelöst, lässt es sich dann durch
+\begin{equation}
+    m = \frac{4\pi^2\theta}{T_B^2B}\ -\ \frac{D}{B}
+    \label{eq:formel13}
+\end{equation}
+berechnen.
 \subsection{Gauß'sche Fehlerfortpflanzung}
 Die bei der Auswertung verwendeten Größen wurden gemäß der Gauß'schen Fehlerfortpflanzung berechnet.
 Die Formel dafür lautet:
