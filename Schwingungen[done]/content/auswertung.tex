@@ -9,7 +9,7 @@
   \caption{Plot.}
   \label{fig:plot}
 \end{figure}
-Der grüne Vergleichsgraph ist die rechnerisch korrekte Einhüllende mit den gegebenen Werten für Schaltkreis 3.
+Der grüne Vergleichsgraph aus \autoref{fig:plot} ist die rechnerisch korrekte Einhüllende mit den gegebenen Werten für Schaltkreis 3.
 \begin{table}[htp]
   %Messwerte aus a)
   \centering
@@ -32,8 +32,21 @@ Der grüne Vergleichsgraph ist die rechnerisch korrekte Einhüllende mit den geg
     \bottomrule
   \end{tabular}
 \end{table}
-\\
-Die Messwerte entsprechen leider nicht der Formel aus dem Versuch, sondern haben starke Abweichungen.
+
+Der effektive Dämpfungswiderstand lässt sich genau so berechnen, wie die effektive Strom- und Spannungsamplitude, und zwar mit:
+\begin{equation}
+    R_{eff} = \frac{R_k}{\sqrt{2}} 
+\end{equation}
+\newpage
+Dabei ist \(R_k\) der benutzte Widerstand des Schaltkreises.
+Die Abklingdauer \(T_{ex}\) lässt sich mit der Gleichung
+\begin{equation}
+    T_{ex} := \frac{2L}{R}
+\end{equation}
+berechnen.\\
+Der Widerstand $R_1$ hat den Wert $30.3\pm0.1\ \Omega$.
+Für $T_{ex}$ ergibt sich demnach ca. $0.00023\pm1.0085\cdot10^{-6}$ s, gemäß (8) und (9).
+Daraus folgt $R_{eff} = 21.4253\pm0.0707\ \Omega$.
 
 \newpage
 \subsection{Bestimmung von \(R_{ap}\)}
@@ -58,7 +71,7 @@ Die \autoref{fig:aper} zeigt, dass bei der Einstellung 2.26 am Drehrad(siehe \au
 \end{figure}
 
 Mithilfe eines einfachen Dreisatzes lässt sich dieser Wert auf einen effektiven Dämpfungswiderstand von \(R_{ap}\) = 1,13k\Omega zurückführen.
-
+\newpage
 \begin{table}
   \centering
   \caption{Dreisatz}
@@ -70,15 +83,21 @@ Mithilfe eines einfachen Dreisatzes lässt sich dieser Wert auf einen effektiven
     \bottomrule
   \end{tabular}
 \end{table}
-Die Formel für den Widerstand \(R_{ap}\) lautet:
-\begin{equation}
-  R_{ap} = 2\cdot\sqrt{\frac{L}{C}}
-\end{equation}
-Mit den gegebenen Werten L = 3.5\pm0.01mH und C = 5.00\pm0.02nF ergibt sich daraus ohne Fehlerrechnung:
+Laut der \autoref{eq:rap} für den Widerstand \(R_{ap}\) mit den gegebenen Werten L = 3.5\pm0.01mH und C = 5.00\pm0.02nF ergibt sich daraus:
 \begin{equation}
   R_{ap} = 1673.32\pm2.4\Omega
 \end{equation}
-Die Diskrepanz liegt bei 543.32\(\pm\)2.4\(\Omega\).
+Die Diskrepanz liegt bei 543.32\(\pm\)2.4\(\Omega\).\\
+Die bei der Auswertung verwendeten Größen wurden gemäß der Gauß'schen Fehlerfortpflanzung berechnet.
+Die Formel dafür lautet:
+\begin{equation}
+    \overline{v_x}=\frac{1}{N} \sum_{j=1}^N v_j
+\end{equation}
+für den Mittelwert der Messung, und
+\begin{equation}
+    u_x = \sqrt{\frac{1}{N(N-1)} \sum_{j=1}^N (v_j-\overline{v_x})^2}
+\end{equation}
+für die Unsicherheiten der Messwerte $v_x$.
 
 \newpage
 \subsection{Verhältnis von \(U_C\) zur Frequenz}
@@ -118,7 +137,8 @@ Die Kondensatorspannung \(U_C\) nimmt anfangs mit steigender Frequenz ebenfalls 
   \caption{Plot2.}
   \label{fig:plot2}
 \end{figure}
-
+Die Resonanzfrequenz liegt bei den gegebenen Werten für Widerstand, Induktivität und Kapazität nach \autoref{eq:resfreq} bei ca 232.662kHz.
+Die Messwerte haben ein Maxima jedoch bei ca 35kHz.
 \newpage
 \subsection{Phasendifferenz vor und nach dem Schwingkreis}
 Um den Phasenunterschied zu messen erfordert es die Distanz a zwischen den Signalen auf der x-Achse und die Wellenlänge b.\\
@@ -182,10 +202,4 @@ Die Werte in \autoref{fig:plot3} zeigen einen exponentiellen Abfall bei höherer
   \label{fig:plot3}
 \end{figure}
 
-Diese Kurve enstpricht der Funktion
-\begin{equation}
-  f(x) = A\cdot e^{-\lambda\cdot\nu} \quad\textrm{mit}\quad A = 67,2 \quad\textrm{und}\quad \lambda\simeq 0.02
-\end{equation}
 
-
-%Siehe \autoref{fig:plot}!

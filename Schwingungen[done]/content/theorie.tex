@@ -25,16 +25,36 @@ Die zugehörige Bewegungsgleichung sieht wie folgt aus:
 \end{equation}
 Die allgemeine Lösung dieser DGL lautet
 \begin{equation}
-    I(t) = A_0 \cdot e^{-\frac{R}{2L}t} \cdot \cos{(\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}\cdot t+\eta)}
+    I(t) = A_0 \cdot e^{-\frac{R}{2L}t} \cdot \cos{(\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}\cdot t+\eta)}
 \end{equation}
 Mithilfe des Ausgangssignals kann individuell der Widerstand, die Kapazität oder die Induktivität berechnet werden, falls zwei der drei Größen gegeben sind.
 Die Form der Einhüllenden \(e^{-\frac{R}{2L}t}\) gibt hierbei an, welcher Fall eintritt.
-Ist \(\frac{1}{LC}<\frac{R^2}{2L^2}\), so liegt ein Kriechfall vor, bei dem die Schwingung langsam kontinuierlich abfällt.
+Ist \(\frac{1}{LC}<\frac{R^2}{4L^2}\ \ \ (1a)\), so liegt ein Kriechfall vor, bei dem die Schwingung langsam kontinuierlich abfällt.
 \\\\
-Ist \(\frac{1}{LC}>\frac{R^2}{2L^2}\), so liegt ein Schwingfall vor, bei dem die Schwingung exponentiell über längere Zeit abfällt.
+Ist \(\frac{1}{LC}>\frac{R^2}{4L^2}\ \ \ (1b)\), so liegt ein Schwingfall vor, bei dem die Schwingung exponentiell über längere Zeit abfällt.
 \\\\
-Ist \(\frac{1}{LC}=\frac{R^2}{2L^2}\), so liegt ein aperiodischer Grenzfall vor, bei dem die Schwingung am schnellsten und ohne Überschwingen abfällt.
+Ist \(\frac{1}{LC}=\frac{R^2}{4L^2}\ \ \ (1c)\), so liegt ein aperiodischer Grenzfall vor, bei dem die Schwingung am schnellsten und ohne Überschwingen abfällt.
 \\
+Der Widerstand des aperiodischen Grenzfalls lässt sich dann aus (1c) umformen zu:
+\begin{equation}
+    R_{ap} = 2\sqrt{\frac{L}{C}}
+    \label{eq:rap}
+\end{equation}
+\subsection{Amplitude eines angeregten Schwingkreises}
+Die Bewegungsgleichung des angeregten gedämpften Schwingkreises ist die inhomogene Version der \autoref{eq:dampfossi}.
+Denn nun ist die DGL angeregt durch $U_0e^{i\omega t}$.
+Nach Auflösung der DGL erhält man als Ergebnis die Kondensatorspannung in Abhängigkeit der Frequenz:
+\begin{equation}
+    U_C(\omega) = \frac{U_0}{\sqrt{(1-LC\omega^2)^2\ +\ \omega^2R^2C^2}}
+    \label{eq:konspan}
+\end{equation}
+Für $\omega \rightarrow \infty$ geht $U_C$ gegen 0 und für $\omega \rightarrow 0$ geht $U_C$ gegen $U_0$.
+Bei
+\begin{equation}
+    \omega_{res} = \sqrt{\frac{1}{LC}\ -\ \frac{R^2}{2L^2}}
+    \label{eq:resfreq}
+\end{equation}
+liegt die Amplitude von $U_C$, da hier der Schwingkreis am meisten Resonanz zeigt. $\omega_{res}$ ist die Resonanzfrequenz.
 \subsection{Phasenverschiebung}
 Ein gedämpfter Schwingkreis kann auch als Phasenverschieber benutzt werden, wenn eine konstante Wechselspannung angelegt wird.
 Die Sinus-Spannung wird vor und nach dem Schwingkreis untersucht und auf einem Oszilloskop überlagert.

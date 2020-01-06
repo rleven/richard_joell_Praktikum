@@ -1,39 +1,32 @@
 \section{Diskussion}
+\label{sec:Diskussion}
 
-Die Ausgleichsgerade der Messwerte der Amplitude ergeben sich bei (relativ) konstanten Zeitabständen zu einer Exponentialfunktion. 
+Die Ausgleichsgerade in \autoref{fig:plot} der Messwerte der Amplitude ergeben sich bei (relativ) konstanten Zeitabständen zu einer Exponentialfunktion. 
 Diese Feststellung stimmt mit den Überlegungen aus der Theorie überein, da als allgemeine Lösung der Differentialgleichung die e-Funktion gewählt wurde. 
 Hier besteht jedoch eine immer größer werdende Diskrepanz. 
 Es stellte sich bei der Untersuchung heraus, dass der e-Funktion und demnach der dort im Argument enthaltene Dämpfungskoeffizient, was hier der Widerstand ist, um den Faktor 2 erhöht werden müsste, damit sich Messwert und die Funktion decken. 
 \\
-Der effektive Dämpfungswiderstand lässt sich genau so berechnen, wie die effektive Strom- und Spannungsamplitude, und zwar mit:
-\begin{equation}
-    R_{eff} = \frac{R_k}{\sqrt{2}} 
-\end{equation}
-Dabei ist \(R_k\) der benutzte Widerstand des Schaltkreises.
-Die Abklingdauer \(T_{ex}\) lässt sich mit der Gleichung
-\begin{equation}
-    T_{ex} := \frac{2L}{R}
-\end{equation}
-%^Muss in die Auswertung
-berechnen.
+\
+\\
 Die normalerweise auftretenden Abweichungen würden sich mithilfe der im Versuch ignorierten Faktoren, die zu den Abweichungen führen, wären die durch die Spulen und Kondensatoren, wie auch durch die Kabel selber auftretenden Widerstände. 
 Zudem kommen Unsicherheiten wie das menschliche Ablesevermögen oder aber auch Wackelkontakte.
 \\
-Der gemessene Wert von \(R_{ap}\) (1130 \(\Omega\)) ist in etwa 30 Prozent kleiner als der theoretische Wert ( 1673.32\(\pm\)2.4\(\Omega\)) %es muss noch der andere Wert her. 
+Der gemessene Wert von \(R_{ap}\) (1130 \(\Omega\)) ist in etwa 30 Prozent kleiner als der theoretische Wert ( 1673.32\(\pm\)2.4\(\Omega\)). %es muss noch der andere Wert her. 
 Gründe hierfür sind weiterhin ungenaue Abmessungen am Oszilloskop oder das sehr ungenaue Drehrad.
 \\
-Sobald \(U_c\) gegen die Frequenz aufgetragen wird, wird ein glockenkurvenähnliches Verhalten erkennbar. 
+Sobald \(U_c\) gegen die Frequenz aufgetragen wird (\autoref{fig:plot2}), wird ein glockenkurvenähnliches Verhalten erkennbar. 
 Dies ist das Resultat aus der Tatsache, dass dieser Schwingkreis eine Eigenfrequenz hat und deshalb auf dem Hochpunkt dieser Kurve die Resonanzfrequenz liegt. 
 Entgegen der Empfehlung ein halb- bzw. doppellogarithmisches Diagramm zu erstellen, wurde ein lineares erstellt, da die Kurve mitsamt deren Breite ansonsten schlecht sichtbar wäre. 
-Die Skala wurde ausgewählt, weil dies gegen KHz statt gegen Hz aufgetragen wurde, welches sich um den Faktor 1000 unterscheidet. 
-Die Breite der Resonanzkurve wurde durch das Ermitteln der Differenz zwischen den Frequenzwerten jener Punkte, an denen die Kurve besonders schnell ansteigt und diese geschätzte Differenz beträgt hier 20 Hz. 
-Verglichen mit den aus R,
+Die Skala wurde ausgewählt, weil dies gegen KHz statt gegen Hz aufgetragen wurde, welches sich um den Faktor 1000 unterscheidet.
+Die Theoriekurve liegt nur dann nahe der Messkurve, wenn die gemessenen Frequenzwerte mal fünf genommen werden. 
+Dies ist ein Messfehler, der möglicherweise durch einen gedrückten Schalter am Frequenzgenerator entstanden sein könnte.
+Die Breite der Resonanzkurve wurde durch das Ermitteln der Differenz zwischen den Frequenzwerten jener Punkte, an denen die Kurve besonders schnell ansteigt, ermittelt und diese geschätzte Differenz beträgt hier 77 Hz. 
 %Man soll vergleichen
 \\
 Auch hier wurde aus den selben Gründen keine logarithmische Skala benutzt.
 %v_res, v_1 und v_2
 \\
 Die Phasenverschiebung wird nur bei tiefen Frequenzen kleiner 200 Hz bemerkbar und nimmt mit zunehmender Frequenz exponentiell zu. 
-Das liegt daran, dass hohe Frequenzen einfacher durch Spulen passieren, als es tiefere tun. Das resultiert in einer Verzögerung für tiefe Frequenzen und erklärt den Phasenunterschied.
-
-\label{sec:Diskussion}
+Das liegt daran, dass tiefere Frequenzen einfacher durch Spulen passieren, als es höhere tun. 
+Ein Kondensator lässt hingegen viel einfacher hohe Frequenzen passieren, als tiefe.
+Das resultiert in einer Verzögerung für hohe Frequenzen und erklärt den Phasenunterschied.
