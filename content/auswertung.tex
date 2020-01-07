@@ -1,3 +1,89 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Die einzelnen magnetischen Momente unter Einwirkung verschiedener Stromstärken (dementsprechend ein variierendes, stärker werdendes Magnetfeld, dessen Formel legitimerweise dem Versuch 308 entnommen wurde \cite{v308}) lassen sich mithilfe der \autoref{eq:formel13} und \autoref{eq:formel11} berechnen.
+
+\begin{table}[htp]
+  \centering
+  \caption{Tabelle der Werte der magnetischen Momente}
+  \label{tab:tabc}
+  \begin{tabular}{c c c}
+      \toprule
+      $ I_i \ [A] $ & $ M_i \ [A\cdot m^2]$ & $\Delta M_i \ [A\cdot m^2]$\\
+      \midrule
+      0.1 & $4.310 \cdot 10^8 $ & $-0.012 \cdot 10^8 $\\
+      0.2 & $5.396 \cdot 10^8 $ & $-0.015 \cdot 10^8 $\\
+      0.3 & $6.389 \cdot 10^8 $ & $-0.018 \cdot 10^8 $\\
+      0.4 & $7.330 \cdot 10^8 $ & $-0.020 \cdot 10^8 $\\
+      0.5 & $8.810 \cdot 10^8 $ & $-0.023 \cdot 10^8 $\\
+      0.6 & $8.949 \cdot 10^8 $ & $-0.025 \cdot 10^8 $\\
+      0.7 & $9.642 \cdot 10^8 $ & $-0.027 \cdot 10^8 $\\
+      0.8 & $1.0330 \cdot 10^9 $ & $-0.0028 \cdot 10^9 $\\
+      0.9 & $1.0855 \cdot 10^9 $ & $-0.0030 \cdot 10^9 $\\
+      1.0 & $1.1139 \cdot 10^9 $ & $-0.0031 \cdot 10^9 $\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+Nun die Periodendauer der Schwingungen einmal unter Einfluss eines variierenden Magnetfeldes und einmal komplett ohne:
+
+\begin{table}[htp]
+  \centering
+  \caption{Tabelle der Messwerte (mit Magnetfeld)}
+  \label{tab:taba}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{c c c c c c c c c c c}
+      \toprule
+      $n$ & $t \ [s] \ (0.1 A)$ & $t \ [s] \ (0.2 A)$ & $t \ [s] \ (0.3 A)$ & $t \ [s] \ (0.4 A)$ & $t \ [s] \ (0.5 A)$ & $t \ [s]  \ (0.6 A)$ & $t \ [s] \ (0.7 A)$ & $t \ [s] \ (0.8 A)$ & $t \ [s] \ (0.9 A)$ & $t \ [s] \ (1 A)$ \\
+      \midrule
+      1 & 12.34 & 9.86 & 8.31 & 7.23 & 6.47 & 5.92 & 5.48 & 5.12 & 4.88 & 4.80\\
+      2 & 12.31 & 9.84 & 8.30 & 7.23 & 6.47 & 5.91 & 5.48 & 5.12 & 4.89 & 4.78\\
+      3 & 12.28 & 9.83 & 8.29 & 7.22 & 6.46 & 5.91 & 5.47 & 5.11 & 4.89 & 4.77\\
+      4 & 12.30 & 9.81 & 8.28 & 7.21 & 6.47 & 5.91 & 5.48 & 5.12 & 4.88 & 4.76\\
+      5 & 12.26 & 9.80 & 8.27 & 7.21 & 6.46 & 5.91 & 5.47 & 5.11 & 4.84 & 4.74\\
+      6 & 12.24 & 9.77 & 8.25 & 7.20 & 6.45 & 5.90 & 5.48 & 5.11 & 4.84 & 4.74\\
+      7 & 12.22 & 9.76 & 8.26 & 7.20 & 6.45 & 5.89 & 5.48 & 5.11 & 4.86 & 4.72\\
+      8 & 12.21 & 9.75 & 8.25 & 7.18 & 6.45 & 5.89 & 5.49 & 5.12 & 4.88 & 4.71\\
+      9 & 12.20 & 9.73 & 8.23 & 7.20 & 6.44 & 5.90 & 5.47 & 5.11 & 4.85 & 4.70\\
+      10 & 12.18 & 9.73 & 8.23 & 7.18 & 6.45 & 5.88 & 5.48 & 5.10 & 4.85 & 4.70\\
+      \bottomrule
+  \end{tabular}}
+\end{table}
+
+%KOMMAS IN PUNKTE UMWANDELN!!! AUCH UNTEN!!
+
+Hier soll übrigens noch angemerkt sein, dass das Pendel vor dem Messen der Schwingungen bei 1 \(A\), aufgrund der zu kleinen Veränderungen, noch einmal eingeschwungen wurde.
+
+\begin{table}[htp]
+  \centering
+  \caption{Tabelle der Messwerte (ohne Magnetfeld)}
+  \label{tab:tabb}
+  \begin{tabular}{c c}
+      \toprule
+      $ n $ & $t \ [s]$\\
+      \midrule
+      1 & 18.615\\
+      2 & 18.613\\
+      3 & 18.609\\
+      4 & 18.609\\
+      5 & 18.616\\
+      6 & 18.638\\
+      7 & 18.629\\
+      8 & 18.606\\
+      9 & 18.597\\
+      10 & 18.617\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
+Durch die \autoref{eq:formelG} und die beiden Gleichungen in der \autoref{eq:formelE} ergibt sich für G, $\mu$ und Q die gemittelten Werte:
+\begin{equation}
+  G = (7.6 \pm 1.5)\cdot 10^{-13}\ \frac{N}{m^2}
+\end{equation}
+\begin{equation}
+  \mu = (1.38 \pm 0.28)\cdot 10^{25}
+\end{equation}
+\begin{equation}
+  Q = (-2.5 \mp 0.5)\cdot 10^{-13}\ \frac{N}{m^2}
+\end{equation}
+
