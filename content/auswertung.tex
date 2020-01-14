@@ -1,0 +1,121 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Die gemessenen Schwingungsdauern der einzelnen Pendel sind in \autoref{tab:einpendel} zu sehen, ebenso wie dessen korrekte Dauer für eine enizelne Schwingung.
+
+\begin{table}
+  \centering
+  \caption{Schwingungsdauern der einzelnen Pendel ohne Feder in $[s]$.}
+  \resizebox{\textwidth}{!}{%
+  \csvreader[tabular=c|c|c|c,
+  head=false, 
+  table head= Messung für $T_1$ & Messung für $T_2$ & Schwingungdauer von $T_1$ & Schwingungsdauer von $T_2$ \\\midrule,
+  late after line= \\]
+  {tabelle1.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$}}
+  \label{tab:einpendel}
+\end{table}
+
+Die Werte sind sehr nah beieinander, sodass die Pendellänge bei beiden gleich bleiben konnte.
+Aus den gesammelten Werten ergibt sich ein gemittelter Wert für $T_1$ und $T_2$:
+\begin{equation}
+  T_1 = 1.547\ s \quad\textrm{und}\quad T_2 = 1.498\ s
+\end{equation}
+\subsection{Gleichphasige Schwingung}
+Die gleichphasige Schwingung wurden bei $l_1 = 58\ cm\pm 0.1\ cm$ und $l_2 = 83\ cm\pm 0.1\ cm$ gemessen.
+
+\begin{table}
+  \centering
+  \caption{Schwingungsdauern der gekoppelten, gleichphasigen Pendel in $[s]$.}
+  \resizebox{\textwidth}{!}{%
+  \csvreader[tabular=c|c|c|c,
+  head=false, 
+  table head= Messung für $l_1$ & Messung für $l_2$ & Schwingungsdauer bei $T_{l_1}$ & Schwingungsdauer bei $T_{l_2}$ \\\midrule,
+  late after line= \\]
+  {tabelle2.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$}}
+  \label{tab:gleichpendel}
+\end{table}
+
+Die \autoref{tab:gleichpendel} zeigt die Dauer einer Schwingung bei verschiedenen Pendellängen.\\
+Die gemittelte Schwingungsdauer beträgt für $l_1 = 58\ cm\pm 0.1\ cm$ $T_{l_1} = 1.540\ s$ und für $l_2 = 83\ cm\pm 0.1\ cm$ $T_{l_2} = 1.788\ s$.
+\newpage
+Gemäß \autoref{eq:lol1} ergibt der theoretische Wert bei\\ $l_{1}$: $1.528\ s\pm0.001\ s$\\ $l_{2}$: $1.828\ s\pm0.001\ s$\\
+Die Fehlerrechnung wurde gemäß der Gauß'schen Fehlerfortpflanzung aus \autoref{sec:gauß} berechnet.\\
+Die Abweichung vom gemittelten, gemessenen $T_{l_1}$ zum theoretischen Äquivalent beträgt ca. 0.779\%.
+Die Abweichung bei $T_{l_2}$ liegt bei ca. 2.188\%.
+
+\subsection{Gegenphasige Schwingung}
+Bei der gegenphasigen Schwingung wurden ebenfalls die Längen $l_1, \ l_2$ benutzt.
+
+\begin{table}
+  \centering
+  \caption{Schwingungsdauern der gekoppelten, gegenphasigen Pendel in $[s]$.}
+  \resizebox{\textwidth}{!}{%
+  \csvreader[tabular=c|c|c|c,
+  head=false, 
+  table head= Messung für $l_1$ & Messung für $l_2$ & Schwingungsdauer bei $l_1$ & Schwingungsdauer bei $l_2$ \\\midrule,
+  late after line= \\]
+  {tabelle3.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$}}
+  \label{tab:gegenpendel}
+\end{table}
+
+Die gemittelten Schwingungsdauern aus \autoref{tab:gegenpendel} sind $T_{l_1} = 1.356\ s$ und $T_{l_2} = 1.670\ s$.
+
+\subsection{Gekoppelte Schwingung}
+Die Messwerte zur Schwingungsdauer $T$ und zur Schwebungsdauer $T_S$ für beide Pendellängen sind in \autoref{tab:koppendel} aufgelistet.
+\newpage
+\begin{table}
+  \centering
+  \caption{Schwingungsdauern der gekoppelten Pendel in $[s]$.}
+  \csvreader[tabular=c|c|c|c,
+  head=false, 
+  table head= $T$ für $l_1$ & $T$ für $l_2$ & $T_S$ bei $l_1$ & $T_S$ bei $l_2$ \\\midrule,
+  late after line= \\]
+  {tabelle4.csv}{1=\eins, 2=\zwei, 3=\drei, 4=\vier}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$ & $\num{\vier}$}
+  \label{tab:koppendel}
+\end{table}
+
+Die gemittelte Schwingungsdauer $T$ beträgt für\\ $l_1$: $T = 1.477\ s$\\ $l_2$: $T = 1.842\ s$\\
+Die gemittelte Schwebungsdauer $T_S$ beträgt für\\ $l_1$: $T_S = 12.723\ s$\\ $l_2$: $T_S = 22.661\ s$
+
+\subsection{Berechnung der Kopplungskonstante $K$}
+\label{sec:ksec}
+Die jeweiligen Frequenzen zu den Schwingungdauern lassen sich mit $\frac{2\pi}{T}$ berechnen.\\
+Die Schwebungsfrequenz berechnet sich mit \autoref{eq:lol3}.
+Demnach lauten die Frequenzen zu den gemittelten Schwingungsdauern:
+
+\begin{table}
+  \centering
+  \caption{Frequenzen für die gemessenen Schwingungsdauern.}
+  \begin{tabular}{c c c}
+    \toprule
+    $\omega$ & Werte für $l_1$ in $Hz$ & Werte für $l_2$ in $Hz$\\
+    \midrule
+    $\omega_+$ & 4.081 & 3.514\\
+    $\omega_-$ & 4.636 & 3.764\\
+    $\omega_S$ & 0.555 & 0.25\\
+  \end{tabular}
+  \label{lab:omgtab}
+\end{table}
+
+Nach der \autoref{eq:Kform} liegt der Wert der Kopplungskonstante bei:
+\begin{equation}
+  K_{l_1} = \frac{4.636^2\ -\ 4.081^2}{4.636^2\ +\ 4.081^2} = 0.127
+\end{equation}
+und
+\begin{equation}
+  K_{l_2} = \frac{3.764^2\ -\ 3.514^2}{3.764^2\ +\ 3.514^2} = 0.069
+\end{equation}
+Die Werte für dieselbe Feder haben eine Abweichung von ca. 54\% voneinander.\\
+Gemittelt hat $K$ den Wert 0.098.
+
+\subsection{Vergleich der theoretischen $T_S$ und gemessenen.}
+Gemäß \autoref{eq:Tpose} ergibt die theoretische Schwebungsfrequenz:
+\begin{equation}
+  T_{S1} = \frac{1.54\cdot 1.356}{1.54\ -\ 1.356}\ s = 11.349\ s \quad\textrm{für}\quad l_1
+\end{equation}
+und
+\begin{equation}
+  T_{S2} = \frac{1.788\cdot 1.670}{1.788\ -\ 1.670}\ s = 25.305\ s \quad\textrm{für}\quad l_2
+\end{equation}
+Die Abweichung zu $T_{S1}$ zum gemessenen Wert beträgt ca. 10.8\%.\\
+Die Abweichung zu $T_{S2}$ zum gemessenen Wert beträgt ca. 10.4\%.\\

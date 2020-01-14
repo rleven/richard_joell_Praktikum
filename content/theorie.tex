@@ -1,0 +1,102 @@
+\section{Theorie}
+\label{sec:Theorie}
+
+\subsection{Einzelnes Fadenpendel}
+Ein Fadenpendel der Länge $l$ erfährt ein Drehmoment $M = D_p\cdot \phi$ bei seiner Auslenkung.
+Dabei ist $\phi$ der Winkel der Auslenkung und $D_p$ die Winkelrichtgröße vom Pendel.\\
+Ein zweites Drehmoment resultiert aus dem Trägheitsmoment $J$ der Pendelmasse $m$.
+Es gilt:
+\begin{equation}
+    M = -J\frac{d^2\phi}{dt^2} \quad\textrm{und}\quad M = D_p\cdot \phi
+\end{equation}
+Daraus folgt der harmonische Oszillator für ein mathematisches Pendel unter Berücksichtigung der Kleinwinkelnäherung für $\phi$:
+\begin{equation}
+    J\cdot \ddot{\phi}\ +\ D_p\phi = 0
+\end{equation}
+Die Schwingungsfrequenz der Lösung dieser Bewegungsgleichung ist definiert als:
+\begin{equation}
+    \omega = \sqrt{\frac{D_p}{J}} = \sqrt{\frac{mlg}{ml^2}} = \sqrt{\frac{g}{l}}
+    \label{eq:swingfreq}
+\end{equation}
+
+\subsection{Gekoppelte Fadenpendel}
+Zwei Fadenpendel sind über eine Feder mit Federkonstante $D_F$ gekoppelt, sodass auf jedes Pendel je ein weiteres Drehmoment wirkt.
+\begin{equation}
+    M_1 = D_F(\phi_2\ -\ \phi_1) \quad\textrm{sowie}\quad M_2 = D_F(\phi_1\ -\ \phi_2)
+\end{equation}
+Hieraus resultiert ein Differentialgleichungssystem, welches die nun voneinander abhängigen Schwingungen beschreibt:
+\begin{equation}
+    J\cdot \ddot{\phi}\ +\ D_p\phi = D_F(\phi_2\ -\ \phi_1)
+\end{equation}
+\begin{equation}
+    J\cdot \ddot{\phi}\ +\ D_p\phi = D_F(\phi_1\ -\ \phi_2)
+\end{equation}
+Die Auslenkwinkel $\alpha_1$ und $\alpha_2$ der beiden Pendel bestimmen die Schwingform.
+Abhängig von den Anfangsbedingungen $\alpha$ und $\alpha'$ ergeben sich drei Schwingungsarten:
+\subsubsection{Gleichphasige Schwingung}
+%\begin{table}
+    %\centering
+    %\caption{Messwerte x und y sowie das Ergebnis nach Gleichung blabla.}
+    %\csvreader[tabular=c|c|c,
+    %head=false, 
+    %table head= $x\:/\:\si{\mega\hertz}$ & $y\:/\:\si{\centi\meter}$ & $Ergebnis \:/\: \si{\milli\tesla}$ \\\midrule,
+    %late after line= \\]
+    %{tabelle1.csv}{1=\eins, 2=\zwei, 3=\drei}{$\num{\eins}$ & $\num{\zwei}$ & $\num{\drei}$}
+    %\label{tab:messwerte}
+%\end{table}
+Für $\alpha_1 = \alpha_2$ resultiert eine gleichphasige Schwingung in der die Feder keine Kraft ausübt.
+Da die Pendel nur durch Schwerkraft angetrieben werden, gilt für dieses System die gleiche Frequenz, wie in \autoref{eq:swingfreq}.
+\begin{equation}
+    \omega_+ = \sqrt{\frac{g}{l}}
+\end{equation}
+Dementsprechend ist die Schwingungsdauer
+\begin{equation}
+    T_+ = \frac{2\pi}{\omega_+} = 2\pi\ \sqrt{\frac{l}{g}}
+    \label{eq:lol1}
+\end{equation}
+
+\subsubsection{Gegenphasige Schwingung}
+Für $\alpha_1 = -\alpha_2$ ergibt sich eine entgegengesetzte, gleich große Schwingung der Pendel, da die Feder beide Pendel mit einer gleich großen Kraft beeinflusst.
+Die Schwingungsfrequenz dafür lautet:
+\begin{equation}
+    \omega_- = \sqrt{\frac{g}{l}\ +\ \frac{2K}{l}}
+\end{equation}
+Dabei ist $K$ die Kopplungskonstante der Feder.
+Die Schwingungsdauer ist somit:
+\begin{equation}
+    T_- = 2\pi\ \sqrt{\frac{l}{g+2K}}
+    \label{eq:lol2}
+\end{equation}
+
+\subsubsection{Gekoppelte Schwingung}
+Für den Fall, dass $\alpha_1 = 0,\ \alpha_2 \neq 0$, bleibt eines der Pendel in seiner Ruhelage und nur das andere wird ausgelenkt.
+Daraus resultiert eine ständig wechselnde Kraftübertragung von einem Pendel auf das andere, die zu den periodischen Stillständen der Pendel führen.
+Die Zeit zwischen zwei solcher Stillstände wird Schwebungsdauer genannt.\\
+Sie besteht aus den Schwingungsdauern der gleichphasigen und gegenphasigen Schwingung:
+\begin{equation}
+    T_S = \frac{T_+\cdot T_-}{T_+\ -\ T_-}
+    \label{eq:Tpose}
+\end{equation}
+mit der Schwebungsfrequenz
+\begin{equation}
+    \omega_S = \omega_-\ -\ \omega_+
+    \label{eq:lol3}
+\end{equation}
+Die Definition für die Kopplungskonstante lautet demnach:
+\begin{equation}
+    K = \frac{\omega_-^2\ -\ \omega_+^2}{\omega_-^2\ +\ \omega_+^2} = \frac{T_+^2\ -\ T_-^2}{T_+^2\ +\ T_-^2}
+    \label{eq:Kform}
+\end{equation}
+
+\subsection{Gauß'sche Fehlerfortpflanzung}
+\label{sec:gauß}
+Die bei der Auswertung verwendeten Größen wurden gemäß der Gauß'schen Fehlerfortpflanzung berechnet.
+Die Formel dafür lautet:
+\begin{equation}
+    \overline{v_x}=\frac{1}{N} \sum_{j=1}^N v_j
+\end{equation}
+für den Mittelwert der Messung, und
+\begin{equation}
+    u_x = \sqrt{\frac{1}{N(N-1)} \sum_{j=1}^N (v_j-\overline{v_x})^2}
+\end{equation}
+für die Unsicherheiten der Messwerte $v_x$.
