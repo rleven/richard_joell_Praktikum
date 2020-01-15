@@ -42,10 +42,12 @@ y1 = [47090, 39990, 37275, 35730, 34760, 33870, 33260, 32740]
 y2 = [30450, 30440, 30440, 30440, 30440, 30440, 30440, 30440]
 x4 = np.linspace(1, 10, 500)
 v2 = 1/(2*np.pi*np.sqrt(L/(1/C+2/(x4*10**(-9)))))
+v3 = 1/(2*np.pi*np.sqrt(L*C))*x4/x4
 
 plt.plot(x1, y1, 'r+', label="v-")
 plt.plot(x1, y2, 'g+', label="v+")
-plt.plot(x4, v2, 'b-', label="Theoriewerte")
+plt.plot(x4, v2, 'b-', label="Theoriewerte v-")
+plt.plot(x4, v3, 'y-', label="Theoriewerte v+")
 plt.xlabel('C in nF')
 plt.ylabel('f in Hz')
 plt.legend(loc='best')
