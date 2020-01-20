@@ -1,17 +1,17 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-In vielen Punkten ist der elektrische gekoppelte Schwingkreis seinem mechanischen Äquivalent sehr ähnlich.
-So besitzt der elektrische Schwingkreis eine mitphasige und eine gegenphasige Schwingungen. 
+In vielen Punkten ist der elektrische gekoppelte Schwingkreis seinem mechanischen Äquivalent sehr ähnlich. Man betrachte dabei eine Masse, die an einer Feder gebunden ist. Wird die Feder ausgelenkt, so wirkt eine Kraft entgegengesetzt zur Auslenkung, welche als "die Rückstellkaft" bezeichnet wird. Die potentielle Energie dessen ist nun maximal. Wird das Ende losgelassen, sinkt die potentielle Energie und die kinetische steigt. Sie erreicht ihren Hochpunkt, sobald die Masse den ursprünglichen Ort der Ruhelage durchquert und geht im Umkehrpunkt wieder gegen 0. Das Prozedere wiederholt sich daraufhin, mit der Ausnahme, dass die Masse sich in entgegengesetzter Richtung bewegt.
+So besitzt der elektrische Schwingkreis eine inphasige       und eine gegenphasige Schwingungen. 
 Die "Feder" ist jedoch ein Kondensator, der die beiden Schaltkreise verbindet.
 Schwingen beide Kreise mit gleicher Phase und Frequenz, wird dieser gewissermaßen übergangen, so wie auch die Feder bei gleicher Schwingung nicht ausgelenkt wird.
 Sollten beide Kreise gegenphasig schwingen, so wird der Kondensator stark belastet.
 \subsection{Gedämpfter Schwingkreis}
-Der gemeine gedämpfte Schwingkreis besteht aus 3 Basiskomponenten: Kondensator, Spule und Widerstand.
+Ein gedämpfter Schwingkreis besteht aus 3 Basiskomponenten: Kondensator, Spule und Widerstand.
 Der Strom am geladenen Kondensator beginnt über die Spule zu fließen, sobald keine Stromquelle mehr vorliegt, bis der Kondensator seine Polarität gewechselt hat.
-Der Strom erzeugt bei diesem Vorgang ein Magnetfeld um die Spule herum. 
+Der fließende Strom induziert viele um das Draht fließende Magnetfelder. Diese addieren sich bei einer Spule zusammen und bilden ein gesamtes, großes Magnetfeld.
 Wenn sich die gesamte Ladung an der anderen Kondensatorplatte angelagert hat, kollabiert das Magnetfeld und sorgt dafür, dass die Ladung wieder beginnt zur anderen Platte zu fließen.
-Die Widerstände in den Leitern, Kondensator und Spule wandeln dabei bei jedem Laden und Entladen des Kondensators einen Teil des Stroms in Wärme um, sodass der Schwingkreis gestört wird und nach ein paar Zyklen verebbt.
+Die Widerstände in den Leitern, Kondensator und Spule wandeln dabei bei jedem Laden und Entladen des Kondensators einen Teil des Stroms in Wärme um, sodass die Schwingung gedämpft wird und nach einigen Zyklen verebbt.
 Die Differenzialgleichung für diesen Schwingkreis lautet:
 \begin{equation}
     \ddot{I}(t) + \frac{R}{L}\dot{I} + \omega I(t) = 0 \quad\textrm{mit}\quad \omega = \sqrt{\frac{1}{LC}}
@@ -32,22 +32,26 @@ Lautet die allgemeine Lösung:
     \label{eq:harmossi2}
 \end{equation}
 
-%Detailierter erzwungene Schwingungen behandeln?? 
+%Detaillierter erzwungene Schwingungen behandeln?? 
 %NOPE!
 
-\subsection{Gekoppelter Schwingkreise}
+\subsection{Gekoppelte Schwingkreise}
 
-Wird an einen Schwingkreis ein weiterer angeschlossen, welcher auch ein Kondensator beinhaltet, so hat man einen gekoppelten Schwingkreis. Sobald ein Kondensator also aufgeladen wird, wird potenzielle Energie in den Schwingkreis hineingeführt. Dessen Schwingkreis fängt von nun an mit seiner Eigenfrequenz zu schwingen, während auch Energie auf das zweite System übertragen wird. Dies sorgt, aufgrund der Erhaltung der Energie, dafür, dass das erste System Energie verliert.
-Dies geht mit der Energie so weiter, sodass diese an sich als Oszillator bezeichnet werden kann.
+%Der unerfahrene Leser soll aber verstehen, dass der andere SK auch einen Kondensator beinhaltet.
+%Es gibt 2 einzelne Kondensatoren und einen, der beide SKs koppelt.
+
+Wird an einen Schwingkreis ein weiterer angeschlossen, so hat man einen gekoppelten Schwingkreis mit einem weiteren Kondensator. Sobald ein Kondensator also aufgeladen wird, wird potenzielle (also elektrische) Energie in den Schwingkreis hineingeführt. Dessen Schwingkreis fängt von nun an mit seiner Eigenfrequenz zu schwingen, während auch Energie auf das zweite System übertragen wird. Dies sorgt, aufgrund der Erhaltung der Energie, dafür, dass das erste System Energie verliert.
+Wie beim einzelnen Schwingkreis, geht das mit der Energie so weiter, sodass diese an sich als Oszillator bezeichnet werden kann.
 Werden zwei Schwingkreise aneinander geschlosssen, so gilt die Knotenregel:
 \begin{equation}
-    I_k = I_1 + I_2
+    I_{ges} = I_1 + I_2
 \end{equation}
+Dabei sind \(I_1\) und \(I_2\) zwei durch einen Knoten fließende Ströme und \(I_{ges}\) der Gesamtstrom.
 Und die beiden Maschenregeln:
 \begin{equation}
-    U_{1C} + U_{1L} + U_k = 0
+    U_{1C} + U_{1L} + U_{\symbffrak{k}} = 0
     \quad\textrm{und}\quad
-    U_{2C} + U_{2L} + U_k = 0.
+    U_{2C} + U_{2L} + U_{\symbffrak{k}} = 0.
 \end{equation} 
 Mit
 \begin{equation}
@@ -55,6 +59,8 @@ Mit
     \quad\textrm{und}\quad
     U_{Li} = L \frac{d}{dt} I_i(t)
 \end{equation}
+i ist eine natürliche Zahl.
+\(U_{j,C}\) ist der Strom am Kondensator, \(U_{j,L}\) der Strom an der Spule, des jeweiligen Stromkreises \(j\).
 und zusätzlicher Differentiation nach der Zeit wird das Gleichungssystem zu einem Differentialgleichungssystem:
 \begin{equation}
 L \frac{d^2}{dt^2} (I_1 + I_2) + \frac{1}{C}(I_1+I_2) = 0
@@ -77,22 +83,28 @@ Also gilt für \(I_1\) und \(I_2\):
 \end{equation}
 und
 \begin{equation}
-    I_2(t) = \frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)-\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr).
+    I_2(t) = -\frac{1}{2}(I_{1,0}-I_{2,0})\cos\Biggl(\Biggl(\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}\Biggr)t\Biggr)+\frac{1}{2}(I_{1,0}+I_{2,0})\cos\Biggl(\frac{1}{\sqrt{LC}}t\Biggr).
 \end{equation}
 Es existieren 2 spezielle Fälle, wie das System schwingen kann:
-1)
-\begin{equation}
+\begin{enumerate}
+\item[(1)] 
+    \begin{equation}
     I_{1,0}=I_{2,0}:
-\end{equation}
-Betrachtet man nun die Gleichungen für \(I_1\) und \(I_2\), so kann anhand der Gleichheit beider Gleichungen festgestellt werden, dass beide Schwinger in Phase schwingen.
-\\
-2)
-\begin{equation}
+    \end{equation}
+
+    Betrachtet man nun die Gleichungen für \(I_1\) und \(I_2\), so kann anhand der Gleichheit beider Gleichungen festgestellt werden, dass beide Schwinger in Phase schwingen.
+
+\item[(2)]
+    \begin{equation}
     I_{1,0}=-I_{2,0}:
-\end{equation}
+    \end{equation}
+\end{enumerate}
 Nun kann anhand der verschiedenen Vorzeichen in beiden Gleichungen festgestellt werden, dass sie gegenphasig schwingen.
 \\
-Falls jedoch eine der beiden Anfangsamplituden 0 ist, während der andere Schwinger ausgelenkt ist, so folgt durch das Einsetzen der Anfangsbedingungen und nach trigonometrischen Umformungen:
+%Welche der beiden 0 ist, ist doch offensichtlich, da die dazugehörige Gleichung direkt darüber ist und die jeweils andere Amplitude daraus folgt.
+
+%Ok.
+Falls jedoch eine der beiden Anfangsamplituden 0 ist, während der andere Schwingkreis angeregt wird, so folgt durch das Einsetzen der Anfangsbedingungen und nach trigonometrischen Umformungen:
 \begin{equation}
     I_1(t)=I_{1,0}\cos\Biggl(\frac{1}{2}(\omega^{+}+\omega^{-})t\Biggr)\cos\Biggl(\frac{1}{2}(\omega^{+}-\omega^{-})t\Biggr)
 \end{equation}
@@ -104,40 +116,42 @@ mit
 \begin{equation}
     \omega^{+}=\frac{1}{\sqrt{LC}} \quad\textrm{und}\quad \omega^{-}=\sqrt{\frac{\frac{1}{C}+\frac{2}{C_k}}{L}}.
 \end{equation}
-Infolge einer Approximation kann geschlussfolgert werden, dass beide Einzelschwinger mit derselben Frequenz schwingen (genauer gesagt sind beide Eigenfrequenzen beinahe identisch). Die Amplitude der Schwingungen ändert sich jedoch gleichzeitig zwischen 0 und der Maximalamplitude eines Schwingers. Das Resultat ist eine Schwebung, dessen Frequenz die Summe aus beiden Eigenfrequenzen ist.
+Infolge einer Approximation der Schwingungsfrequenzen aufgrund der Tatsache, dass sie sich nur ein wenig voneinander unterscheiden, kann geschlussfolgert werden, dass beide Einzelschwinger mit derselben Frequenz schwingen (genauer gesagt sind beide Eigenfrequenzen beinahe identisch). Die Amplitude der Schwingungen ändert sich jedoch gleichzeitig zwischen 0 und der Maximalamplitude eines Schwingers. Das Resultat ist eine Schwebung, dessen Frequenz die Summe aus beiden Eigenfrequenzen ist.
+
+%Abbildung einer Schwebung.
 
 \subsection{Berechnung des Stromes}
 
 In einem gekoppelten Schwingkreis mit Verlusten, die als Widerstände dargestellt werden, gelten folgende Gleichungen:
 
 \begin{equation}
-(X_C + X_L + X_{C,R} + X_R)\cdot I_1 - X_{C,K}\cdot I_2 = U
+(Z_C + Z_L + Z_{C,R} + Z_R)\cdot I_1 - Z_{C,K}\cdot I_2 = U
 \quad\textrm{und}\quad
-(X_C + X_L + X_{C,R} + X_R)\cdot I_2 - X_{C,K}\cdot I_1 = 0
+(Z_C + Z_L + Z_{C,R} + Z_R)\cdot I_2 - Z_{C,K}\cdot I_1 = 0
 \end{equation}
 mit
 \begin{equation}
-X_C = -i\frac{1}{\omega C},\quad X_L = i\omega L,\quad X_{C,K} = -i\frac{1}{\omega C_K},\quad X_{C,R}=R
+Z_C = -i\frac{1}{\omega C},\quad Z_L = i\omega L,\quad Z_{C,K} = -i\frac{1}{\omega C_K},\quad Z_{C,R}=R
 \end{equation}
-, wobei \(X\) die Blindwiderstände der Komponenten sind.\\
+, wobei \(Z\) die Blindwiderstände der Komponenten sind.\\
 Wird \(I_1\) eliminiert, die Gleichungen für die Blindwiderstände eingesetzt und nach \(I_2\) umgestellt, fehlt es der Übersichthalber noch die Gleichung in folgender Form zu bringen:
 \begin{equation}
-I_2 = \mathit{Re}(I_2)+i\mathit{Im}(I_2)  
+I_2 = \symit{Re}(I_2)+\symit{iIm}(I_2)  
 \end{equation}
 Multipliziert mit \(U\) ergibt sich:
 \begin{equation}
-    \bigl|I_2\bigr| = \bigl|U\bigr| \frac{1}{\sqrt{4\omega^2C_K^2R^2Z(\omega)^2+\Bigl(\frac{1}{\omega C_K}-\omega C_KZ(\omega)^2+\omega R^2C_K\Bigr)^2}} := \bigl|U\bigr| \bigl|L\bigr|
+    \bigl|I_2\bigr| = \bigl|U\bigr| \frac{1}{\sqrt{4\omega^2C_K^2R^2Z(\omega)^2+\Bigl(\frac{1}{\omega C_K}-\omega C_KZ(\omega)^2+\omega R^2C_K\Bigr)^2}} := \bigl|U\bigr| \bigl|L\bigr|, \quad U = U_0 e^{i\omega t}
 \end{equation}
 
-Falls \(\omega\) in der Gleichung gegen 0 oder unendlich geht, konvergiert \(I_2\) gegen 0. Ansonsten hat sie 2 Maxima. Einmal für
+Falls \(\omega\) in der Gleichung gegen 0 oder unendlich geht, konvergiert \(I_2\) gegen 0. Ansonsten hat dieser zwei Maxima. Einmal für die Fundamentalfrequenz $\omega^{+}$ in:
 
 \begin{equation}
    \bigl|L(\omega^+)\bigr| = \frac{1}{R\sqrt{4+\frac{R^2C_K^2}{LC}}}
    \label{eq:strom+}
 \end{equation}
-und
+und für die Fundamentalfrequenz $\omega^{-}$ in:
+
 \begin{equation}
     \bigl|L(\omega^-)\bigr| = \frac{1}{R\sqrt{4+\frac{R^2C_K^2}{LC}\biggl(1+\frac{C}{C_K}\biggr)}}
     \label{eq:strom-}
 \end{equation}
-Dies sind die Leitwerte bei den Fundamentalfrequenzen.

@@ -44,10 +44,10 @@ x4 = np.linspace(1, 10, 500)
 v2 = 1/(2*np.pi*np.sqrt(L/(1/C+2/(x4*10**(-9)))))
 v3 = 1/(2*np.pi*np.sqrt(L*C))*x4/x4
 
-plt.plot(x1, y1, 'r+', label="v-")
-plt.plot(x1, y2, 'g+', label="v+")
-plt.plot(x4, v2, 'b-', label="Theoriewerte v-")
-plt.plot(x4, v3, 'y-', label="Theoriewerte v+")
+plt.plot(x1, y1, 'r+', label=r"$v^-$")
+plt.plot(x1, y2, 'g+', label=r"$v^+$")
+plt.plot(x4, v2, 'b-', label=r"Theoriewerte für $v^-$")
+plt.plot(x4, v3, 'y-', label=r"Theoriewerte für $v^+$")
 plt.xlabel('C in nF')
 plt.ylabel('f in Hz')
 plt.legend(loc='best')
@@ -57,13 +57,13 @@ plt.savefig('build/plot2.pdf')
 plt.close()
 
 i=0
-w1 = [2733.28125, 2811.375, 2811.375, 2733.28125, 2733.28125, 2733.28125, 2811.375]
-w2 = [7340.8125, 6169.40625, 5388.46875, 4841.8125, 4373.25, 4060.875, 3826.59375]
+w1 = [24.962, 24.972, 24.978, 24.978, 24.984, 24.978, 24.978]
+w2 = [24.987, 24.928, 24.957, 24.965, 24.971, 24.967, 24.970]
 x1 = [2.03, 3.00, 4.00, 5.02, 6.47, 8.00, 9.99]
-plt.plot(x1, w1, '.y', label='Omega+')
-plt.plot(x1, w2, '.r', label='Omega-')
-plt.xlabel('C_k in nF')
-plt.ylabel('Omega in kHz')
+plt.plot(x1, w1, '-y', label=r'$v^+$')
+plt.plot(x1, w2, '-r', label=r'$v^-$')
+plt.xlabel(r'$C_\mathrm{k}$ in nF')
+plt.ylabel(r'$v$ in kHz')
 plt.legend(loc= 'best')
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
