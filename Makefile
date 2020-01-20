@@ -4,16 +4,25 @@ all: build/main.pdf
 build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python plot.py
 
-build/80Cplot.pdf: tabellen3.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python tabellen3.py
-
-build/plot1.pdf, build/plot2.pdf, build/plot3.pdf: tabellen1.py matplotlibrc header-matplotlib.tex | build
+build/plot1.pdf: tabellen1.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python tabellen1.py
 
-build/plot4.pdf, build/plot5.pdf: tabellen2.py matplotlibrc header-matplotlib.tex | build
+build/plot2.pdf: tabellen1.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python tabellen1.py
+
+build/plot3.pdf: tabellen1.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python tabellen1.py
+
+build/plot4.pdf: tabellen2.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python tabellen2.py
+
+build/plot5.pdf: tabellen2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python tabellen2.py
+
+build/plot6.pdf: tabellen3.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python tabellen3.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf build/80Cplot.pdf build/plot1.pdf build/plot2.pdf build/plot3.pdf build/plot4.pdf build/plot5.pdf
+build/main.pdf: build/plot.pdf build/plot1.pdf build/plot2.pdf build/plot3.pdf build/plot4.pdf build/plot5.pdf build/plot6.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
