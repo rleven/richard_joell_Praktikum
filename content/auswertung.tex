@@ -60,3 +60,23 @@ Um den Wärmestrom $\Delta Q/\Delta t$ zu berechnen, braucht es die Werte der W�
     \item[] $A_{Edelstahl} = 48\cdot 10^{-6}\ m^2$
     \item[] $\Delta x_{Edelstahl} = 0.03\ m$ 
 \end{itemize}
+
+Daraus ergeben sich für 5 zufällige Messzeiten mithilfe der \autoref{eq:warmcurrent} folgende Wärmeströme in \autoref{tab:warmcurrent}.
+
+\begin{table}
+    \centering
+    \caption{Tabelle des Wärmestroms für 5 versch. Messzeiten.}
+    \begin{tabular}{c|c|c|c|c}
+        \toprule
+        Messzeit [s] & $\Delta T = T2\ -\ T1$ [K] & $\frac{\Delta Q}{\Delta t}_{12}\ [W]$ & $\Delta T = T7\ -\ T8$ & $\frac{\Delta Q}{\Delta t}_{78}\ [W]$\\
+        \midrule
+
+    \end{tabular}
+\end{table}
+
+\begin{figure}
+    \centering
+    \includegraphics{build/plot3.pdf}
+    \caption{Plot der Differenzen der Temperatur von Messing und Edelstahl.}
+    \label{fig:deltaT}
+\end{figure}
