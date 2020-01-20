@@ -1,0 +1,62 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+\subsection{Statische Methode}
+Die gegebenen Werte für die Berechnungen sind in \autoref{tab:werte} zu sehen.
+
+\begin{table}
+    \centering
+    \caption{Vorgegebene Werte für die Berechnungen.}
+    \begin{tabular}{c|c|c|c}
+        Material & Abmessungen [cm] & $\rho$ [$\frac{kg}{m^3}$] & $c$ [$\frac{J}{kg\cdot K}$]\\
+        \midrule
+        Messing (breit) & 9 x 1.2 x 0.4 & 8520 & 385\\
+        Messing (schmal) & 9 x 0.7 x 0.4 & 8520 & 385\\
+        Aluminium & 9 x 1.2 x 0.4 & 2800 & 830\\
+        Edelstahl & 9 x 1.2 x 0.4 & 8000 & 400\\
+    \end{tabular}
+    \label{tab:werte}
+\end{table}
+
+In \autoref{fig:45grad1} ist zu erkennen, dass beide Temperaturen ähnlich verlaufen, doch ist die Temperatur am Abtastpunkt T4 durchschnittlich 11.908\% kleiner.
+
+\begin{figure}
+    \centering
+    \includegraphics{build/plot1.pdf}
+    \caption{Die Temperaturverläufe von Messing  weisen eine ähnliche logarithmische Steigung auf. Dabei steigt T4 langsamer an als T1.}
+    \label{fig:45grad1}
+\end{figure}
+
+\newpage
+Sehr ähnlich verlaufen auch die Temperaturen in \autoref{fig:45grad2}, wobei hier T5 deutlich stärker ansteigt als T8.
+Die Temperaturkurven haben einen durchschnittlichen Unterschied von 27.499\% voneinander.
+
+\begin{figure}
+    \centering
+    \includegraphics{build/plot2.pdf}
+    \caption{Die Temperaturverläufe von Aluminium und Edelstahl steigen ebenfalls logarithmisch an, wobei Edelstahl deutlich langsamer an Hitze gewinnt.}
+    \label{fig:45grad2}
+\end{figure}
+\newpage
+Die Temperatur der Thermoelemente am Ende der Messung bei $425\ s$ betragen:
+
+\begin{itemize}
+    \centering
+    \item[] $T1 = 48.74\ °C$ 
+    \item[] $T4 = 50.14\ °C$
+    \item[] $T5 = 50.37\ °C$
+    \item[] $T8 = 35.64\ °C$
+\end{itemize}
+
+Die beste Wärmeleitung hat demnach Aluminium am Abgriff T5.
+\newpage
+Um den Wärmestrom $\Delta Q/\Delta t$ zu berechnen, braucht es die Werte der Wärmeleitfähigkeit für die verschiedenen Materialien \cite{web}, sowie den Querschnitt der Metalle und den Abstand der Abgriffstellen.
+\begin{itemize}
+    \item[] $\kappa_{Messing} = 111\ \frac{W}{m\cdot K}$
+    \item[] $A_{Messing(breit)} = 48\cdot 10^{-6}\ m^2$
+    \item[] $\Delta x_{Messing(breit)} = 0.03\ m$ 
+    \item[] 
+    \item[] $\kappa_{Edelstahl} = 14.4\ \frac{W}{m\cdot K}$
+    \item[] $A_{Edelstahl} = 48\cdot 10^{-6}\ m^2$
+    \item[] $\Delta x_{Edelstahl} = 0.03\ m$ 
+\end{itemize}
