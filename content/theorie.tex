@@ -1,3 +1,42 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+Ein Temperaturungleichgewicht kann durch Wärmetransport, wie zum Beispiel Wärmestrahlung oder Konvektion, ausgeglichen werden. Dabei werden Phononen und freie Elektronen transportiert.\\
+Die dabei überführte Wärmemenge in einem Stab wird wie folgt berechnet:
+
+\begin{equation}
+    dQ = -\kappa A \frac{\partial T}{\partial x} dt
+    \label{eq:warmcurrent}
+\end{equation}
+
+wobei A die Querschnittsfläche des Stabes ist, L die Länge, \(\kappa\) die Wärmeleitfähigkeit, \(\frac{\partial T}{\partial x}\) die Temperaturübertragung, wobei das Vorzeichen durch die in Richtung geringerer Wärme fließender Temperatur entsteht.\\
+Es gilt für die Wärmestromdichte
+\begin{equation}
+    j_w = -\kappa\frac{\partial T}{\partial x}
+    \label{eq:jw}
+\end{equation}
+und die Wärmeleitungsgleichung
+\begin{equation}
+    \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c}\frac{\partial^2 T}{\partial x^2}
+    \label{eq:wavey}
+\end{equation}
+Dabei ist \(\rho\) die Materialdichte und c die spezifische Wärme ist.\\
+Die Wärme breitet sich wellenartig aus, weshalb sie mit seiner Funktion, dessen Form die einer typischen Welle ist, beschrieben werden kann (was bereits durch die wellenförmige Differentialgleichung, \autoref{eq:wavey}, ersichtlich wird. Anhand dessen kann übrigens induziert werden, dass die Proportionalitätskonstante die Geschwindigkeit der Temperaturveränderung darstellt).:
+\begin{equation}
+    T(x,t) = T_{max}e^{-x\sqrt{\frac{\omega \rho c}{2\kappa}}}\cos\biggl(\omega t-x\sqrt{\frac{\omega \rho c}{2\kappa}}\biggr) 
+\end{equation}
+Wird diese Funktion in \autoref{eq:wavey} eingesetzt, so ergibt sich für die Phasengeschwindigkeit \(v\):
+\begin{equation}
+    v = \sqrt{\frac{2\kappa \omega}{\rho c}}
+\end{equation}
+Anhand des Amplitudenverhältnisses an zwei verschiedenen Messstellen mit Abstand \(\Delta x\) ergibt sich für \(\kappa\):
+\begin{equation}
+    \kappa = \frac{\rho c (\Delta x)^2}{2\ln\biggl(\frac{A_1}{A_2}\biggr)\Delta t}
+\end{equation}
+
+\(\Delta t\) ist hierbei die Phasendifferenz der Temperaturwellen im Abstand \(\Delta x\).
+\\
+Falls Unsicherheiten auftreten, so wird die Gauß'sche Fehlerformel benutzt, um die resultierende Unsicherheit zu berechnen:
+\begin{equation}
+    \Delta f = \sqrt{\sum_{i=1}^N  \Bigl(\frac{\partial f}{\partial x_i}\Bigr)^2 (\Delta x_i)^2}
+\end{equation}
