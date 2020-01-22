@@ -44,8 +44,7 @@ plt.savefig("build/plot3.pdf")
 plt.close()
 
 #print(1-x4/x1)
-print(sum(1-x4/x1)/len(x1))
-print(sum(1-x8/x5)/len(x1))
+#print(x2[10]-x1[10])
 #Ergebnisrundx = ["%.3f" % elem for elem in ergebnisx]
 #Ergebnisrundy = ["%.3f" % elem for elem in ergebnisy]
 #xrund = ["%.2f" % elem for elem in x3]
