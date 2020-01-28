@@ -82,7 +82,8 @@ In \autoref{fig:deltaT} ist die Differenz der Temperaturen dargestellt, die in \
 \newpage
 \subsection{Dynamische Methode}
 Die \autoref{fig:dynamic1} zeigt die Temperaturverläufe von beiden Abgriffstellen des breiten Messingstabs.
-Um die notwendigen Amplituden für die Berechnung der Wärmeleitfähigkeit $\kappa$ wird jede einzelne Amplitude verglichen und bestimmt.
+Um die notwendigen Amplituden für die Berechnung der Wärmeleitfähigkeit $\kappa$ zu bestimmen, wird jede einzelne Amplitude per Hand vermessen und berechnet.
+Die Extrema werden hierbei mithilfe von \textit{Scipy.signal.argrelextrema} bestimmt.
 
 \begin{figure}[htbp]
     \centering
@@ -117,16 +118,17 @@ Die benötigten und gemittelten Daten von \autoref{tab:ampl} für die Berechnung
 \begin{itemize}
     \centering
     \item[] $ln(\frac{A_{nah}}{A_{fern}}) = 1.04\pm 0.05$ 
-    \item[] $\Delta t = 17.143\ s$
+    \item[] $\Delta t = 17.143\ s\pm 1.487\ s$
     \item[] $\Delta x = 0.03\ m$
     \item[] $\rho = 8520\ \frac{kg}{m^3}$
     \item[] $c = 385\ \frac{J}{kg\cdot K}$
 \end{itemize}
 
 Daraus ergibt sich nach \autoref{eq:warleit}:
-\begin{itemize}
-    \item[] $\kappa_{Messing} = 83\pm 4\ \frac{W}{m\cdot K}$ 
-\end{itemize}
+ 
+\begin{equation}
+    \kappa_{Messing} = 83\pm 8\ \frac{W}{m\cdot K}
+\end{equation}
 
 Bei allen Berechnungen wurden die Unsicherheiten mit \autoref{eq:gauß} und \textit{Python 3.7, uncertainties} ausgerechnet.
 \newpage
@@ -164,7 +166,7 @@ Für die Berechnung der Wärmeleitfähigkeit von Aluminium sind die Werte
 \begin{itemize}
     \centering
     \item[] $ln(\frac{A_{nah}}{A_{fern}}) = 0.555\pm 0.032$
-    \item[] $\Delta t = 8.571\ s$
+    \item[] $\Delta t = 8.571\ s\pm 1.429\ s$
     \item[] $\Delta x = 0.03\ m$
     \item[] $\rho = 2800\ \frac{kg}{m^3}$
     \item[] $c = 830\ \frac{J}{kg\cdot K}$
@@ -172,9 +174,10 @@ Für die Berechnung der Wärmeleitfähigkeit von Aluminium sind die Werte
 
 in \autoref{eq:warleit} einzusetzen.\\
 Die Wärmeleitfähigkeit für Aluminium ist somit:
-\begin{itemize}
-    \item[] $\kappa_{Aluminium} = 220\pm 13\ \frac{W}{m\cdot K}$ 
-\end{itemize}
+ 
+\begin{equation}
+    \kappa_{Aluminium} = 220\pm 40\ \frac{W}{m\cdot K}
+\end{equation}
 
 Die Periodendauer der Messung von Edelstahl betrug $200\ s$, bis eines der  acht Abtastpunkte $80\ °C$ erreichte, sodass möglichst viele Zyklen gemessen werden konnten.
 In \autoref{fig:dynamic3} ist der Temperaturverlauf von den Abtastpunkten T7 und T8 aufgetragen, sowie die Maxima.
@@ -220,13 +223,14 @@ Damit liegen die benötigten, gemittelten Werte bei:
 \begin{itemize}
     \centering
     \item[] $ln(\frac{A_{nah}}{A_{fern}}) = 3.38\pm 0.16$
-    \item[] $\Delta t = 76.333\ s$
+    \item[] $\Delta t = 76.333\ s\pm 3.857\ s$
     \item[] $\Delta x = 0.03\ m$
     \item[] $\rho = 8000\ \frac{kg}{m^3}$
     \item[] $c = 400\ \frac{J}{kg\cdot K}$
 \end{itemize}
 
 Daraus ergibt sich für die Wärmeleitfähigkeit von Edelstahl:
-\begin{itemize}
-    \item[] $\kappa_{Aluminium} = 5.58\pm 0.26\ \frac{W}{m\cdot K}$
-\end{itemize}
+
+\begin{equation}
+    \kappa_{Aluminium} = 5.6\pm 0.4\ \frac{W}{m\cdot K}
+\end{equation}
