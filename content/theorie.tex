@@ -19,12 +19,29 @@ $V_0$ ist das Molvolumen.\\
 Die Molwärme $C_P$ lässt sich ebenfalls schreiben durch:
 \begin{equation}
     C_P = c_kM
+    \label{eq:cp}
 \end{equation}
-Dabei ist $c_k$ die spezifische Wärmekapazität und $M$ die Masse des Metalls.
-\\
-\
-\\
-Das Dulong-Petitsche Gesetz sagt aus, dass die Molwärme eines Stoffes immer $3R$ betragen müsste, unabhängig von den Eigenschaften des Stoffes.
-Dabei ist $R$ die allgemeine Gaskonstante.
+Dabei ist $c_k$ die spezifische Wärmekapazität und $M$ die Masse des Metalls.\\
+Um die spezifische Wärmekapazität zu bestimmen, werden die Temperatur des Stoffes $T_k$, die Temperatur des Wassers $T_W$, die Mischungstemperatur $T_m$, die Masse des Wassers und des Stoffes $m_k$ und $m_W$, sowie die spezifischen Wärmekapazitäten von Stoff, Wasser und Thermobehälter.
+Damit berechnet man:
+\begin{equation}
+    c_k = \frac{(c_Wm_W\ +\ c_gm_g)(T_m-T_W)}{m_k(T_k\ -\ T_m)}
+    \label{eq:warmcap}
+\end{equation}
+\newline
+Das Dulong-Petitsche Gesetz sagt aus, dass die Molwärme eines Stoffes immer $C_V = 3R$ betragen müsste, unabhängig von den Eigenschaften des Stoffes.
+Dabei ist $R$ die allgemeine Gaskonstante und beträgt ca $8.314\ \frac{kg\ m^2}{s^2\ mol\ K}$ \cite{gas}.
 
 \subsection{Das Dulong-Petitsche Gesetz mit Quantenphysik}
+
+Es zeigt sich, dass das Dulong-Petitsche Gesetz nicht immer korrekte Werte angibt.
+Das hängt damit zusammen, dass für atomare Schwingungen die Beziehung
+\begin{equation}
+    \Delta E = n\cdot \hbar \cdot \omega
+\end{equation}
+gilt, wobei $\omega$ die Frequenz ist. Nur diese Energie kann das Atom dann abgeben oder aufnehmen.\\
+Dadurch ist der quantenmechanische Zusammenhang von Energie und Temperatur nun:
+\begin{equation}
+    E = \frac{3N_A\hbar \omega}{e^{\frac{\hbar \omega}{kT}}\ -\ 1}
+\end{equation}
+Das $N_A$ ist dabei die Avogardokonstante.
