@@ -1,2 +1,125 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+\subsection{Die Wärmekapazität des Kalorimeters}
+
+Zunächst wird die Wärmekapazität des Kalorimeters bestimmt. Dies wird mit der Hilfe von folgender Gleichung gemacht:
+
+\begin{equation}
+    Q_1 = c_km_k(T_k-T_m)
+\end{equation}
+und 
+\begin{equation}
+    Q_2 = (c_wm_w+c_gm_g)(T_m-T_w)
+\end{equation}
+woraus sich für die Wärmekapazität des Kalorimeters ergibt:
+\begin{equation}
+    c_gm_g = \frac{c_wm_k(T_k-T_m)-c_wm_w(T_m-T_w)}{T_m-T_w}
+    \label{eq:cgmg}
+\end{equation}
+Und für \(c_k\):
+\begin{equation}
+    c_k = \frac{(c_wm_w+c_gm_g)(T_m-T_w)}{m_k(T_k-T_m)}
+    \label{eq:ck}
+\end{equation}
+Wobei \(T_k\) die Temperatur des Wassers im erhitzten Gefäß, \(T_w\) die Temperatur des Wassers im Kalorimeters und \(T_m\) die Mischungstemperatur ist. \(c_w\) ist die Wärmekapazität des Wassers, welche 4,18 J/gK beträgt und \(c_gm_g\) die Wärmekapazität des Kalorimeters.
+Hier die Werte:
+%y=k,x=w
+\(T_w\) = 21,3°C = 294,5 K\\
+\(T_k\) = 80,0°C = 353,15 K\\
+\(T_m\) = 47,2°C = 320,35 K\\
+\(m_w\) = 300,03 g\\
+\(m_k\) = 290,00 g\\
+
+Somit ergibt sich für die Wärmekapazität des Kalorimeters:
+
+\begin{equation}
+    c_gm_g = 283.99 \frac{J}{K}
+\end{equation}
+
+\subsection{Die Wärmekapazitäten verschiedener Stoffe}
+
+\begin{table}[htp]
+    %Messwerte aus a)
+    \centering
+    \caption{Die Werte von dem Experiment mit Zinn.}
+    \label{tab:tabZn}
+    \begin{tabular}{c c c c}
+      \toprule
+      Daten & Messung 1 & Messung 2 & Messung 3\\
+      \midrule
+            \(m_w\)[g] & 616.50 & 616.59 & 617.60\\
+            \(m_k\)[g] & 203.04 & 203.04 & 203.04\\
+            \(T_w\)[K] & 294.50 & 294.85 & 296.85\\
+            \(T_k\)[K] & 353.15 & 353.15 & 353.15\\
+            \(T_m\)[K] & 295.95 & 296.15 & 297.95\\
+      \bottomrule
+            \(c_{k(Zinn)}\)[J/gK] & 0.36 & 0.32 & 0.28\\
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[htp]
+    %Messwerte aus a)
+    \centering
+    \caption{Die Werte von dem Experiment mit Aluminium.}
+    \label{tab:tabAl}
+    \begin{tabular}{c c c c}
+      \toprule
+      Daten & Messung 1 & Messung 2 & Messung 3\\
+      \midrule
+            \(m_w\)[g] & 593.23 & 616.68 & 637.91\\
+            \(m_k\)[g] & 158.83 & 158.83 & 158.83\\
+            \(T_w\)[K] & 294.75 & 294.45 & 294.35\\
+            \(T_k\)[K] & 353.15 & 353.15 & 353.15\\
+            \(T_m\)[K] & 298.15 & 297.65 & 297.15\\
+      \bottomrule
+            \(c_{k(Aluminium)}\)[J/gK] & 1.08 & 1.03 & 0.93\\
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[htp]
+    %Messwerte aus a)
+    \centering
+    \caption{Die Werte von dem Experiment mit Graphit}
+    \label{tab:tabC}
+    \begin{tabular}{c c}
+      \toprule
+      Daten & Werte\\
+      \midrule
+            \(m_w\)[g] & 623.96\\
+            \(m_k\)[g] & 105.00\\
+            \(T_w\)[K] & 294.55\\
+            \(T_k\)[K] & 353.15\\
+            \(T_m\)[K] & 296.95\\
+      \bottomrule
+            \(c_{k(Graphit)}\)[J/gK] & 1.18\\
+    \end{tabular}
+  \end{table}
+
+Die Mittelwerte der Werte mit mehreren Messungen lassen sich mit folgender Formel berechnen:
+
+\begin{equation}
+    x_{Mittel}=\frac{1}{N} \sum_{i=1}^N x_i
+\end{equation}
+Somit ergibt sich für \(c_{k(Zinn)}\) 0.32 [J/gK] und für \(c_{k(Aluminium)}\) 1.01 [J/gK].
+
+Die Abweichungen von den Literaturwerten betragen für Aluminium 12,72 Prozent.\\
+Für Zinn 39,13 Prozent.\\
+Für Graphit dann noch 49,37 Prozent.
+
+\subsection{Die Molwärmen der Stoffe}
+
+\begin{table}[htp]
+    \centering
+    \caption{Zu sehen sind die berechneten Molwärme der Stoffe und die Abweichungen.}
+    \label{tab:tabMol}
+    \begin{tabular}{c c c}
+        \toprule
+        Elemente & Molwärme [J/mol K]& Abweichungen [Prozent]\\
+        \midrule
+        Zinn & 26.67 & 220.78 \\
+        Aluminium & 19.86 & 138.87\\
+        Graphit & 10.40 & 25.09\\
+        \bottomrule
+    \end{tabular}
+\end{table}
