@@ -1,3 +1,4 @@
+\newpage
 \section{Auswertung}
 \label{sec:Auswertung}
 
@@ -25,21 +26,23 @@ Und für \(c_k\):
 Wobei \(T_k\) die Temperatur des Wassers im erhitzten Gefäß, \(T_w\) die Temperatur des Wassers im Kalorimeters und \(T_m\) die Mischungstemperatur ist. \(c_w\) ist die Wärmekapazität des Wassers, welche 4,18 J/gK beträgt und \(c_gm_g\) die Wärmekapazität des Kalorimeters.
 Hier die Werte:
 %y=k,x=w
-\(T_w\) = 21,3°C = 294,5 K\\
-\(T_k\) = 80,0°C = 353,15 K\\
-\(T_m\) = 47,2°C = 320,35 K\\
-\(m_w\) = 300,03 g\\
-\(m_k\) = 290,00 g\\
-
+\begin{itemize}
+  \centering
+  \item[] \(T_w\) = 21,3°C = 294,5 K\\
+  \item[] \(T_k\) = 80,0°C = 353,15 K\\
+  \item[] \(T_m\) = 47,2°C = 320,35 K\\
+  \item[] \(m_w\) = 300,03 g\\
+  \item[] \(m_k\) = 290,00 g\\ 
+\end{itemize}
 Somit ergibt sich für die Wärmekapazität des Kalorimeters:
 
 \begin{equation}
     c_gm_g = 283.99 \frac{J}{K}
 \end{equation}
-
+\newpage
 \subsection{Die Wärmekapazitäten verschiedener Stoffe}
-
-\begin{table}[htp]
+Zuerst wird die Wärmekapazität von Zinn anhand 3 Messungen bestimmt, mittels \autoref{eq:ck} und \autoref{eq:cgmg}.
+  \begin{table}[htp]
     %Messwerte aus a)
     \centering
     \caption{Die Werte von dem Experiment mit Zinn.}
@@ -58,6 +61,10 @@ Somit ergibt sich für die Wärmekapazität des Kalorimeters:
     \end{tabular}
   \end{table}
 
+Der gemittelte Wert für $c_{k(Zinn)}$ liegt dabei bei $\bar{c_k} = 0.32\pm 0.04\ \frac{J}{gK}$.
+Alle Mittelungen und deren Standardabweichungen wurden mit \autoref{eq:std} bestimmt.\\
+\newline
+Nun wird $c_k$ für Aluminium bestimmt(\autoref{tab:tabAl}).
   \begin{table}[htp]
     %Messwerte aus a)
     \centering
@@ -77,6 +84,9 @@ Somit ergibt sich für die Wärmekapazität des Kalorimeters:
     \end{tabular}
   \end{table}
 
+Der gemittelte Wert für $c_{k(Aluminium)}$ liegt bei $\bar{c_k} = 1.01\pm 0.08\ \frac{J}{gK}$.\\
+\newline
+Es wurde nur eine Messung zur Wärmekapazität von Graphit aufgenommen(\autoref{tab:tabC}).
   \begin{table}[htp]
     %Messwerte aus a)
     \centering
@@ -95,31 +105,26 @@ Somit ergibt sich für die Wärmekapazität des Kalorimeters:
             \(c_{k(Graphit)}\)[J/gK] & 1.18\\
     \end{tabular}
   \end{table}
-
-Die Mittelwerte der Werte mit mehreren Messungen lassen sich mit folgender Formel berechnen:
-
-\begin{equation}
-    x_{Mittel}=\frac{1}{N} \sum_{i=1}^N x_i
-\end{equation}
-Somit ergibt sich für \(c_{k(Zinn)}\) 0.32 [J/gK] und für \(c_{k(Aluminium)}\) 1.01 [J/gK].
-
-Die Abweichungen von den Literaturwerten betragen für Aluminium 12,72 Prozent.\\
-Für Zinn 39,13 Prozent.\\
-Für Graphit dann noch 49,37 Prozent.
+\newpage
+Die Abweichungen von den Literaturwerten betragen für Aluminium 12,72\%.\\
+Für Zinn 39,13\%.\\
+Für Graphit dann noch 49,37\%.
 
 \subsection{Die Molwärmen der Stoffe}
 
-\begin{table}[htp]
+Die Molwärme der Stoffe wird mithilfe von \autoref{eq:cp} bei einer Temperatur von $80°C = 353.15K$ berechnet und in \autoref{tab:tabMol} aufgeführt.
+
+\begin{table}[htbp]
     \centering
-    \caption{Zu sehen sind die berechneten Molwärme der Stoffe und die Abweichungen.}
+    \caption{Zu sehen sind die berechneten Molwärme der Stoffe und die Abweichungen.\cite{warm}}
     \label{tab:tabMol}
-    \begin{tabular}{c c c}
+    \begin{tabular}{c c c c}
         \toprule
-        Elemente & Molwärme [J/mol K]& Abweichungen [Prozent]\\
+        Elemente & Molwärme [$\frac{J}{mol\cdot K}$]& spezifische Wärmekapazität [$\frac{J}{gK}$] & Abweichungen der $\bar{c_k}$ [\%]\\
         \midrule
-        Zinn & 26.67 & 220.78 \\
-        Aluminium & 19.86 & 138.87\\
-        Graphit & 10.40 & 25.09\\
+        Zinn & $35.906\pm 4.748$ & $0.32\pm 0.04$ & $28.13\pm 8.98$\\
+        Aluminium & $25.954\pm 2.16$ & $1.01\pm 0.08$ & $11.39\pm 7.02$\\
+        Graphit & $14.124$ & $1.18$ & $39.41$\\
         \bottomrule
     \end{tabular}
 \end{table}

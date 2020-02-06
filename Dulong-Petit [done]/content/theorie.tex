@@ -13,6 +13,7 @@ Die Molwärme kann bei konstantem Druck, oder bei konstantem Volumen gemessen we
 Die Differenz von $C_P$ und $C_V$ ist definiert mit:
 \begin{equation}
     C_P\ -\ C_V \ =\ 9\alpha^2 \kappa V_0 T
+    \label{eq:cv}
 \end{equation}
 Hierbei ist $\alpha$ der lineare Ausdehnungskoeffizient, $\kappa$ ist das Kompressionsmodul, was auch durch $V(\frac{\partial\rho}{\partial V})_T$ beschrieben wird.
 $V_0$ ist das Molvolumen.\\
@@ -21,7 +22,7 @@ Die Molwärme $C_P$ lässt sich ebenfalls schreiben durch:
     C_P = c_kM
     \label{eq:cp}
 \end{equation}
-Dabei ist $c_k$ die spezifische Wärmekapazität und $M$ die Masse des Metalls.\\
+Dabei ist $c_k$ die spezifische Wärmekapazität und $M$ die Gramms pro Mol.\\
 Um die spezifische Wärmekapazität zu bestimmen, werden die Temperatur des Stoffes $T_k$, die Temperatur des Wassers $T_W$, die Mischungstemperatur $T_m$, die Masse des Wassers und des Stoffes $m_k$ und $m_W$, sowie die spezifischen Wärmekapazitäten von Stoff, Wasser und Thermobehälter.
 Damit berechnet man:
 \begin{equation}
@@ -45,3 +46,13 @@ Dadurch ist der quantenmechanische Zusammenhang von Energie und Temperatur nun:
     E = \frac{3N_A\hbar \omega}{e^{\frac{\hbar \omega}{kT}}\ -\ 1}
 \end{equation}
 Das $N_A$ ist dabei die Avogardokonstante.
+\subsection{Fehlerrechnung}
+Um bei Mittelungen von Messwerten eine Standardabweichung zu berechnen, braucht es folgende Formel:
+\begin{equation}
+    \sigma_x = \sqrt{\frac{1}{N\ -\ 1}\sum_{i=1}^N(x_i\ -\ \bar{x})^2}
+    \label{eq:std}
+\end{equation}
+Der benötigte Mittelwert ergibt sich aus:
+\begin{equation}
+    \bar{x} = \sum_{i=1}^N x_i
+\end{equation}

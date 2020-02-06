@@ -11,7 +11,7 @@ plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
 plt.legend(loc='best')
 
 plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
+plt.plot(x, y, label='Kurvi')
 plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
 plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
 plt.legend(loc='best')
